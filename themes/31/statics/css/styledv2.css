@@ -1,0 +1,158 @@
+#steps ul li {
+    background: #f4f4f4
+}
+#steps ul li:before {
+    background: #f4f4f4
+}
+#steps ul li:after {
+    border-left-color: #f4f4f4
+}
+#step ul .active.first:before {
+    background: #2e9e6c;
+    border-left: 25px solid #2e9e6c
+}
+#steps ul .active {
+    color: #fff;
+    background: #0099cc;
+}
+#steps ul .active:before {
+    background: #0099cc;
+    border-left: 25px solid #fff;
+}
+#steps ul .active:after {
+    background: #fff;
+    border-left: 25px solid #0099cc;
+}
+#steps ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+#steps ul li {
+    width: 33.33%;
+    float: left;
+    text-align: center;
+    display: block;
+    padding: 0;
+    text-transform: uppercase;
+    height: 45px;
+    line-height: 44px;
+    position: relative;
+}
+
+#steps ul li:before,
+#steps ul li:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 23px solid transparent;
+    border-left: 25px solid #fff;
+    border-bottom: 22px solid transparent;
+    background: #fff;
+    position: absolute;
+    top: 0;
+}
+#steps ul li:before {
+    background: #f4f4f4;
+}
+#steps ul li:after {
+    border-left-color: #f4f4f4;
+}
+#steps ul li:before {
+    left: 0;
+}
+
+#steps ul li:after {
+    right: 0;
+}
+
+#steps ul .active {
+    color: #fff;
+    background: #2e9e6c;
+}
+
+#steps ul .active:before {
+    background: #2e9e6c;
+    border-left: 25px solid #fff;
+}
+
+#steps ul .active:after {
+    background: #fff;
+    border-left: 25px solid #2e9e6c;
+}
+
+#steps ul .active.end:after {
+    background: #2e9e6c;
+    border-left: 25px solid #2e9e6c;
+}
+
+
+form#form-steps .controls {
+    position: relative
+}
+form#form-steps .controls>i {
+    position: absolute;
+    top: 8px
+}
+form#form-steps .controls>input,
+form#form-steps .controls>select,
+form#form-steps .controls>p.form-control {
+    border: none !important;
+    border-bottom: 2px solid #f5f5f5 !important;
+    box-shadow: none !important;
+    display: inline-block;
+    color: #666;
+    text-indent: 10px;
+    border-radius: 0 !important
+}
+form#form-steps .controls select>option {
+    color: #666
+}
+form#form-steps .controls select[readonly] {
+    background: none !important
+}
+.controls.no-icon>input,
+.controls.no-icon>select {
+    padding-left: 0 !important;
+    text-indent: 0 !important
+}
+form#form-steps .controls>input.valid,
+form#form-steps .controls>select.valid {
+    border-color: #2e9e6c !important
+}
+form#form-steps .controls>input.invalid,
+form#form-steps .controls>select.invalid {
+    border-color: #ef5222 !important
+}
+#select-trip{
+    margin-top: 15px;
+}
+.detail-review {
+    width: 100%;
+    float: left;
+}
+.showDropStartPoint {
+    position: absolute;
+    z-index: 99999;
+    background: #fff;
+    height: 250px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    top: 40px;
+}
+.showDropEndPoint {
+    position: absolute;
+    height: 250px;
+    overflow-y: scroll;
+    z-index: 9999;
+    border: 1px solid #ddd;
+    background: #fff;
+    top: 40px;
+}
+@media(max-width:767px){
+    #steps ul li{
+        font-size: 9px !important;
+    }
+}

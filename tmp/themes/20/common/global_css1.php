@@ -1,0 +1,18 @@
+<?php
+                    /**
+                     * @Project BNC v2 -> Template
+                     * @File /data/www/superweb/fe/tmp/themes/20//common/global_css1.php
+                     * @Author Quang Chau Tran (quangchauvn@gmail.com)
+                     */
+                    if(!defined('BNC_CODE')) {
+                        exit('Access Denied');
+                    }
+                    ?><!-- Main css -->
+<link rel="stylesheet" href="<?=$web['static_temp']?>/<?=$web['temp']?>/statics/css/bootstrap.min.css?v=1.4">
+<!-- MATERIAL DESIGN ICONIC FONT -->
+<link rel="stylesheet" href="https://interbuslines.com/themes/20/statics/insurrancelove/fonts/material-design-iconic-font/css/material-design-iconic-font.css">
+<link rel="stylesheet" href="https://interbuslines.com/themes/20/statics/insurrancelove/css/themify-icons.css?v=1">
+<link rel="stylesheet" href="<?=$web['static_temp']?>/<?=$web['temp']?>/statics/jquery-confirm-v3.3.0/dist/jquery-confirm.min.css">
+<!-- STYLE CSS -->
+<link rel="stylesheet" href="https://interbuslines.com/themes/20/statics/insurrancelove/css/style.css?v=1.3">
+<link rel="stylesheet" href="https://interbuslines.com/themes/20/statics/insurrancelove/css/styled.css?v=2.3">

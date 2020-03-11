@@ -1,0 +1,1484 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Đan Anh Limousine</title>
+    
+<!-- 
+css của anvui 
+
+để tránh xung đột css, vui lòng đặt trên cùng trong header, các file css theme của dananh sẽ override lại các thuộc tính bị trùng
+ -->
+
+<link rel="stylesheet" href="http://dananhlimousine.vn/themes//22/statics/css/styledv2.css?v=5.0">
+<link rel="stylesheet" href="http://dananhlimousine.vn/themes//22/statics/css/main.css?v=5.3">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="http://dananhlimousine.vn/themes//22/statics/js/jquery-ui-1.9.2.custom/css/ui-lightness/jquery-ui-1.9.2.custom.min.css">
+<link rel="stylesheet" href="http://dananhlimousine.vn/themes//22/statics/css/jquery.datepicker.lunar.css">
+
+<!-- hết css từ anvui -->
+
+	<!-- font-awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+    <!-- bootstrap dùng cho các form đặt vé + contact của anvui -->
+	<link rel='stylesheet'  href='./css/bootstrap.min.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/fix-bootstrap.css' type='text/css' media='all' />
+
+    <!-- owl carousel version mới nhất 2019 -->	
+	<link rel='stylesheet'  href='./css/owl.carousel.min.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/owl.theme.default.css' type='text/css' media='all' />
+	
+
+    <!-- Dananh theme-css -->    
+
+    <link rel='stylesheet'  href='./css/style.css' type='text/css' media='all' />
+
+    <!--
+    <link rel='stylesheet'  href='./css/main.css' type='text/css' media='all' />
+    <link rel='stylesheet'  href='./css/max460.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/max800.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/max1023.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/max1365.css' type='text/css' media='all' />
+	-->
+
+
+    
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    
+    <!-- theme-js -->    
+	<script type="text/javascript" src="./js/main.js"></script>
+	
+
+    <!-- mobile viewport detector -->    
+    <!-- CÁI NÀY CỰC KÌ QUAN TRỌNG, xin đừng bỏ -->	
+	<script>
+    if(navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)  
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)) 
+    {
+    	document.write('<meta name="viewport" content="width=460,maximum-scale=1.0,user-scalable=yes">');
+	}
+	
+	$( function() {
+    $( ".datepicker" ).datepicker();
+  	} );
+	</script>
+
+
+<!-- js từ anvui -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/bootstrap.min.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/jquery-ui-1.9.2.custom/js/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/jquery-ui-1.9.2.custom/development-bundle/ui/i18n/jquery.ui.datepicker-vi.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/jquery.datepicker.lunar.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/jquery-dateFormat/src/dateFormat.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/jquery-dateFormat/src/jquery.dateFormat.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/jquery-dateFormat/src/jquery.dateFormat.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/jquery-confirm-v3.3.0/dist/jquery-confirm.min.js"></script>
+<script src="http://dananhlimousine.vn/themes//22/statics/js/webcommon.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-3.0.0.js?v=1.3"></script>
+<!-- hết js từ anvui -->
+
+
+</head>
+
+<body>
+
+<!-- fixed menu -->    	
+
+<div class="transition top-menu" id="top-menu">
+	<div class="my-container">
+    	<a href="">
+        <div class="logo transition">
+        
+            <img class="logo-mark transition" src="svg/dananh-logomark.svg" />
+            <h1 class="logo-type transition">DAN ANH</h1>
+        </div>
+        </a>
+        <div class="menu-burger">&nbsp;</div>
+        
+        <div class="nav-menu">
+            <ul class="menu-content">
+                <li><a href="index.html" >Trang chủ</a></li>
+                <li><a href="/dat-ve?routeId=R08Y1qGtOdpzRoX" >Đặt chỗ trực tuyến</a></li>
+                <li><a href="info.html" >Chúng tôi</a></li>
+                <li><a href="news.html" >Tin tức & Cộng đồng</a></li>
+                <li><a href="contact.html" >Liên hệ</a></li>
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+<!-- end fixed menu -->    	
+
+
+<section class="booking-page">
+<div class="my-container">
+	<div class="title-block">
+        <h1>Đặt chỗ trực tuyến</h1>
+        <p class="" style="font-size:20px;" >tại Đan Anh Limousine</p>
+    </div>
+    
+    <div class="booking-area main-wrap pr">
+           
+     <div class="search-wrap pr clearfix">
+
+        <div class="tab-content">
+
+            <div id="bus-search-box " class="wow fadeIn animated animated" data-wow-duration="100ms" data-wow-delay="100ms" style="visibility: visible; animation-duration: 100ms; animation-delay: 100ms; animation-name: fadeIn; display: block;">
+                <div class="col-sm-12 title"><span>Vé Xe Khách</span></div>
+                <form action="dat-ve" id="search-form ">
+                    <div class="row pr" id="Bus-search-panel-box-div">
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="form-group">
+                                <label for="startPoint" >Điểm đi</label>
+                                <div class="iconic-input">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <input type="text" class="form-control" name="startPoint" id="startPoint" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="Bus swap">
+                            <div class="form-group">
+                                <a><i class="fa icon-switch"></i></a>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="form-group">
+                                <label for="endPoint" >Điểm đến</label>
+                                <div class="iconic-input">
+                                    <i class="fa fa-map-marker-alt"></i>
+                                    <input type="text" class="form-control" name="endPoint" id="endPoint" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-3">
+                            <div class="form-group">
+                                <label for="depatureDate" >Ngày đi</label>
+                                <div class="iconic-input">
+                                    <i class="fa fa-calendar"></i>
+                                    <input type="text" class="form-control datepicker" name="depatureDate" id="depatureDate" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <div class="form-group">
+                                <div class="search-btn">
+                                    <input type="hidden" id="startId" name="startId">
+                                    <input type="hidden" name="returnDate">
+                                    <input type="hidden" id="endId" name="endId">
+                                    <button type="submit" class="btn btn-orange" id="search-btn">Tìm kiếm xe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="row" id="Bus-search-option-div">
+                <div class="col-lg-12">
+                    <a href="javascript:;" id="aBasic_Bus" class="orange" style="display: none;">Tìm kiếm cơ bản</a>
+                    <a href="javascript:;" id="aAdvanced_Bus" class="orange" style="">Tìm kiếm nâng cao</a>
+]                    <a data-toggle="modal" data-target="#suggest-new-route" class="suggest-route">Đề Xuất Tuyến Mới</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+     <div class="form-tab-booking">
+     </div>
+
+        
+    </div>
+    
+    <div id="loading" style="display: block;">
+
+    <div class="loader"></div>
+
+</div>
+
+<div class="">
+
+    <div class="row">
+
+            <div id="select-trip">
+
+                <div id="trip-oneway" style="display: block">
+
+                <div class="col-md-12">
+
+                    <div id="steps">
+
+                        <ul class="list-step clearfix">
+
+                            <li class="active">Chọn chuyến <span></span> </li>
+
+                            <li>Chi tiết vé<span></span></li>
+
+                            <li>Thanh toán <span></span></li>
+
+                        </ul>
+
+                    </div>
+
+                    <h3 class="chooseticket">1. Lựa chọn chuyến đi</h3>
+
+                    <h4 class="trip">
+
+                        <strong class="start">Hồ chí minh</strong>
+
+                        <span class="scb-to"> Tới: </span>
+
+                        <strong class="end">đà lạt</strong>
+
+                         <span id="selecttypecars"> <span class="scb-to"> Loại xe: </span><select onchange="showtypecars(this.value)"><option value="alltypecars">Tất cả các loại xe</option><option value="VT08Y1qGtAqURXsx">Limousine 12 chỗ</option></select></span>
+
+                    </h4>
+
+                    <div class="oneway-info">
+
+                        <span class="fdate-highlight">
+
+                            Ngày đi: <strong class="startDate">31/01/2019</strong>
+
+                        </span>
+
+                    </div>
+
+                    <div class="table-responsive list-trip">
+                        <div id="list-oneway"><li class="alltypecars VT08Y1qGtAqURXsx scheduleId-S08d1qIxfa4rCIi"> <div class="hidden-xs"> <div class="offer-container hidden-sm hidden-xs"> <div class="container-fluid payoo-offer-container"> <div class="row"> <div class="col-sm-4 col-xs-3 pd-0 mb10" style="width:auto"> <div class="offer-tag">Loại xe</div></div><div class="col-sm-10 col-xs-10 pd-0 ml20" style="margin-top:2px;"> <span></span> <span class="noti-detail" style="cursor:pointer;color:#1867bc"> Limousine 12 chỗ </span> </div></div><div class="pop-vxr w300 payoo-offer-tip" style="display: none;"> <div class="body-pop"> <div> <p style="line-height: 20px;white-space: pre-line;"></p></div></div></div></div></div><div class="col-2 col-md-3 col-sm-3 col-xs-2"> <div class="row"> <div class="pull-left comp-name-container"> <h6>Sài Gòn - Đà Lạt</h6> </div></div></div><div class="col-4 col-md-6 col-lg-5 col-sm-3 col-xs-4 detail-route"> <div class="col-12 ml10" style="text-align:center;"> <div class="col-5 col-md-5 col-sm-12 text-left-from"> <h6>11:00 07/03/2019</h6> </div><div class="col-1 col-md-1 col-sm-12 text-left" style="padding:0;"> - </div><div class="col-5 col-md-5 col-sm-12 text-left-to"> <h6>19:00, 07/03/2019</h6> </div><div class="clearfix"></div><div class="pull-left hidden-sm" style="width:100%;"> <div class="col-5 col-md-5 col-sm-5"> <a>Hồ Chí Minh </a> </div><div class="col-2 col-md-2 col-sm-2"></div><div class="col-5 col-md-5 col-sm-5 payoo-mt2"> <a>Đà Lạt</a> </div></div></div></div><div class="col-2 col-md-2 col-sm-3 col-xs-2" style="text-align:center"> <div style="margin-bottom:3px !important">Limousine 12 chỗ</div><div class="clearfix"></div><div class="service-call seats-text mt15" style=""> <span>11</span> Ghế trống </div></div><div class="text-right pr0 col-md-3 col-sm-3 col-xs-2 col-lg-2"><h6> 220000 <small style="vertical-align: top;" class="unit-price-small">đ</small> </h6> <p style="margin:0;"> </p><div class="ticket-ac-btn btn-vxr-lg btn pull-right w100 hasSeat closed " onclick="selectTripOneWay(this)" data-ratio="1" data-getinpoint="P02KdxtFwwxwS" data-getoffpoint="PT1C_HFODUkdC6" data-startdate="1551916800000" data-intime="1551931200000" data-starttime="11:00 07/03/2019" data-offtime="1551960000000" data-trip="-1" data-schedule="S08d1qIxfa4rCIi" data-tripstatus="-1" data-route="R08Y1qGtOdpzRoX" data-inpointname="Hồ Chí Minh" data-offpointname="Đà Lạt" data-price="220000"> <p style="display:none" class="additonPriceInfo">{}</p><p></p>Chọn </div> <p></p></div><div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xs-12"> <i>*Thuộc chuyến 11:00 07/03/2019Sài Gòn - Đà Lạt</i> </div></div><div class="hidden-lg hidden-sm hidden-md"> <div class="col-xs-12"> <div class="row"> <div class="offer-container hidden-sm hidden-xs"> <div class="container-fluid payoo-offer-container"> <div class="row"> <div class="col-sm-4 col-xs-3 pd-0 mb10" style="width:auto"> <div class="offer-tag">Loại xe</div></div><div class="col-sm-10 col-xs-10 pd-0 ml20" style="margin-top:2px;"> <span>Limousine 12 chỗ</span> <span class="noti-detail" style="cursor:pointer;color:#1867bc"> </span> </div></div><div class="pop-vxr w300 payoo-offer-tip" style="display: none;"> <div class="body-pop"> <div> <p style="line-height: 20px;white-space: pre-line;"></p></div></div></div></div></div><div class="offer-container hidden-lg hidden-md"> <div class="container-fluid payoo-offer-container"> <div class="row"> <div class="col-sm-4 col-xs-3" style="width:auto"> <div class="offer-tag">Loại xe</div></div><div class="col-sm-7 col-xs-8 pd-0" style="margin-top:2px;"> <span class="noti-detail">Limousine 12 chỗ</span> </div></div><div class="pop-vxr w300 payoo-offer-tip" style="display: none;"> <div class="body-pop"> <div> <p style="line-height: 20px;white-space: pre-line;"></p></div></div></div></div></div></div><div class="row"> <div class="col-xs-7"> <div class="star-mobile"> <h6> 11:00 07/03/2019 </h6> <i class="pl5 pr5 text-gray3 left-arrow">→</i> <h6> 19:00, 07/03/2019 </h6> </div></div><div class="col-xs-5 text-right"> <h6> 220000 <small style="vertical-align: top;" class="unit-price-small">đ</small> </h6> </div></div><div class="row"> <div class="col-xs-6"> <h6 class="comp-name-title text-gray3">Sài Gòn - Đà Lạt</h6> </div><div class="col-xs-6 text-right"> <p> <span>11</span> Ghế trống </p></div></div><div class="row"> <div class="col-xs-6"> <div class="text-gray vehicle-type-p mb3 hidden-lg hidden-md"> Hồ Chí Minh → Đà Lạt </div></div></div><div class="row"> <div class="col-xs-6"> <div class="text-gray vehicle-type-p mb3 hidden-lg hidden-md">Limousine 12 chỗ</div></div><div class="col-xs-6 text-right"> <p style="margin:0;"> </p><div class="ticket-ac-btn btn-vxr-lg btn pull-right w100 hasSeat closed " onclick="selectTripOneWay(this)" data-ratio="1" data-getinpoint="P02KdxtFwwxwS" data-getoffpoint="PT1C_HFODUkdC6" data-startdate="1551916800000" data-intime="1551931200000" data-offtime="1551960000000" data-trip="-1" data-schedule="S08d1qIxfa4rCIi" data-tripstatus="-1" data-route="R08Y1qGtOdpzRoX" data-inpointname="Hồ Chí Minh" data-offpointname="Đà Lạt" data-price="220000"> <p style="display:none" class="additonPriceInfo">{}</p> Chọn </div> <p></p></div></div></div></div></li><li class="alltypecars VT08Y1qGtAqURXsx scheduleId-S08d1qIxgXfmmzv"> <div class="hidden-xs"> <div class="offer-container hidden-sm hidden-xs"> <div class="container-fluid payoo-offer-container"> <div class="row"> <div class="col-sm-4 col-xs-3 pd-0 mb10" style="width:auto"> <div class="offer-tag">Loại xe</div></div><div class="col-sm-10 col-xs-10 pd-0 ml20" style="margin-top:2px;"> <span></span> <span class="noti-detail" style="cursor:pointer;color:#1867bc"> Limousine 12 chỗ </span> </div></div><div class="pop-vxr w300 payoo-offer-tip" style="display: none;"> <div class="body-pop"> <div> <p style="line-height: 20px;white-space: pre-line;"></p></div></div></div></div></div><div class="col-2 col-md-3 col-sm-3 col-xs-2"> <div class="row"> <div class="pull-left comp-name-container"> <h6>Sài Gòn - Đà Lạt</h6> </div></div></div><div class="col-4 col-md-6 col-lg-5 col-sm-3 col-xs-4 detail-route"> <div class="col-12 ml10" style="text-align:center;"> <div class="col-5 col-md-5 col-sm-12 text-left-from"> <h6>23:00 07/03/2019</h6> </div><div class="col-1 col-md-1 col-sm-12 text-left" style="padding:0;"> - </div><div class="col-5 col-md-5 col-sm-12 text-left-to"> <h6>07:00, 08/03/2019</h6> </div><div class="clearfix"></div><div class="pull-left hidden-sm" style="width:100%;"> <div class="col-5 col-md-5 col-sm-5"> <a>Hồ Chí Minh </a> </div><div class="col-2 col-md-2 col-sm-2"></div><div class="col-5 col-md-5 col-sm-5 payoo-mt2"> <a>Đà Lạt</a> </div></div></div></div><div class="col-2 col-md-2 col-sm-3 col-xs-2" style="text-align:center"> <div style="margin-bottom:3px !important">Limousine 12 chỗ</div><div class="clearfix"></div><div class="service-call seats-text mt15" style=""> <span>11</span> Ghế trống </div></div><div class="text-right pr0 col-md-3 col-sm-3 col-xs-2 col-lg-2"><h6> 220000 <small style="vertical-align: top;" class="unit-price-small">đ</small> </h6> <p style="margin:0;"> </p><div class="ticket-ac-btn btn-vxr-lg btn pull-right w100 hasSeat closed " onclick="selectTripOneWay(this)" data-ratio="1" data-getinpoint="P02KdxtFwwxwS" data-getoffpoint="PT1C_HFODUkdC6" data-startdate="1551916800000" data-intime="1551974400000" data-starttime="23:00 07/03/2019" data-offtime="1552003200000" data-trip="-1" data-schedule="S08d1qIxgXfmmzv" data-tripstatus="-1" data-route="R08Y1qGtOdpzRoX" data-inpointname="Hồ Chí Minh" data-offpointname="Đà Lạt" data-price="220000"> <p style="display:none" class="additonPriceInfo">{}</p><p></p>Chọn </div> <p></p></div><div class="col-12 col-md-12 col-lg-12 col-sm-12 col-xs-12"> <i>*Thuộc chuyến 23:00 07/03/2019Sài Gòn - Đà Lạt</i> </div></div><div class="hidden-lg hidden-sm hidden-md"> <div class="col-xs-12"> <div class="row"> <div class="offer-container hidden-sm hidden-xs"> <div class="container-fluid payoo-offer-container"> <div class="row"> <div class="col-sm-4 col-xs-3 pd-0 mb10" style="width:auto"> <div class="offer-tag">Loại xe</div></div><div class="col-sm-10 col-xs-10 pd-0 ml20" style="margin-top:2px;"> <span>Limousine 12 chỗ</span> <span class="noti-detail" style="cursor:pointer;color:#1867bc"> </span> </div></div><div class="pop-vxr w300 payoo-offer-tip" style="display: none;"> <div class="body-pop"> <div> <p style="line-height: 20px;white-space: pre-line;"></p></div></div></div></div></div><div class="offer-container hidden-lg hidden-md"> <div class="container-fluid payoo-offer-container"> <div class="row"> <div class="col-sm-4 col-xs-3" style="width:auto"> <div class="offer-tag">Loại xe</div></div><div class="col-sm-7 col-xs-8 pd-0" style="margin-top:2px;"> <span class="noti-detail">Limousine 12 chỗ</span> </div></div><div class="pop-vxr w300 payoo-offer-tip" style="display: none;"> <div class="body-pop"> <div> <p style="line-height: 20px;white-space: pre-line;"></p></div></div></div></div></div></div><div class="row"> <div class="col-xs-7"> <div class="star-mobile"> <h6> 23:00 07/03/2019 </h6> <i class="pl5 pr5 text-gray3 left-arrow">→</i> <h6> 07:00, 08/03/2019 </h6> </div></div><div class="col-xs-5 text-right"> <h6> 220000 <small style="vertical-align: top;" class="unit-price-small">đ</small> </h6> </div></div><div class="row"> <div class="col-xs-6"> <h6 class="comp-name-title text-gray3">Sài Gòn - Đà Lạt</h6> </div><div class="col-xs-6 text-right"> <p> <span>11</span> Ghế trống </p></div></div><div class="row"> <div class="col-xs-6"> <div class="text-gray vehicle-type-p mb3 hidden-lg hidden-md"> Hồ Chí Minh → Đà Lạt </div></div></div><div class="row"> <div class="col-xs-6"> <div class="text-gray vehicle-type-p mb3 hidden-lg hidden-md">Limousine 12 chỗ</div></div><div class="col-xs-6 text-right"> <p style="margin:0;"> </p><div class="ticket-ac-btn btn-vxr-lg btn pull-right w100 hasSeat closed " onclick="selectTripOneWay(this)" data-ratio="1" data-getinpoint="P02KdxtFwwxwS" data-getoffpoint="PT1C_HFODUkdC6" data-startdate="1551916800000" data-intime="1551974400000" data-offtime="1552003200000" data-trip="-1" data-schedule="S08d1qIxgXfmmzv" data-tripstatus="-1" data-route="R08Y1qGtOdpzRoX" data-inpointname="Hồ Chí Minh" data-offpointname="Đà Lạt" data-price="220000"> <p style="display:none" class="additonPriceInfo">{}</p> Chọn </div> <p></p></div></div></div></div><div id="select-seat-oneway"><div class="col-md-8"><div class="row"><div class="col-md-6"><div class="select-seat"><h3 class="trip-info">Chọn ghế chuyến đi</h3><ul class="chuthich"><li><div class="ghetrong"></div> Ghế trống</li><li><div class="ghedachon"></div> Ghế đã chọn</li><li><div class="ghedaban"></div> Ghế đã bán</li><li><div class="ghetreem"></div> Ghế trẻ em</li></ul><div id="seatMapOneWay" class="row"><div class="col-md-12 col-sm-12 col-xs-12 tachtang"><div class="col-md-12 col-sm-12 col-xs-12 text-center"><strong>Tầng 1</strong></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe driver"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_2" onclick="chonghe('2')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_3" onclick="chonghe('3')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_4" onclick="chonghe('4')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghedachon" id="chonghe_5" onclick="chonghe('5')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_6" onclick="chonghe('6')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghedachon" id="chonghe_7" onclick="chonghe('7')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_8" onclick="chonghe('8')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_9" onclick="chonghe('9')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_10" onclick="chonghe('10')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_11" onclick="chonghe('11')" data-over="0"></div></div><div class="col-md-2 col-sm-2 col-xs-2 ghe-3"><div class="chonghe ghetrong" id="chonghe_12" onclick="chonghe('12')" data-over="0"></div></div></div></div></div><div class="select-seat" id="chooseRound" style="display: none"><h3 class="trip-info">Chọn ghế chuyến về</h3><p style="padding-left: 15px; padding-bottom: 20px; font-style: italic">* Trẻ em vẫn được tính chỗ và giá vé bằng 100% vé người lớn. </p><ul class="chuthich"><li><div class="ghetrong"></div> Ghế trống</li><li><div class="ghedachon"></div> Ghế đã chọn</li><li><div class="ghedaban"></div> Ghế đã bán</li><li><div class="ghetreem"></div> Ghế trẻ em</li></ul><div id="seatMapRound" class="row"></div></div></div><div class="col-md-6"><div class="select-seat"><h3 class="trip-info">Thông tin hành khách</h3><p style="padding-left: 15px; padding-bottom: 20px;">Quý khách vui lòng nhập thông tin chính xác </p><div class="row form-customer"><div class="col-md-12"><label for="fullname" style="display: none;">Họ và tên (<span class="required">*</span>)</label><input type="text" placeholder="Họ và tên" class="form-control" name="fullname" id="fullname" autofocus="" required=""></div><div class="col-md-12"><label for="phoneNumber" style="display: none;">Số điện thoại (<span class="required">*</span>)</label><input type="text" placeholder="Số điện thoại" class="form-control" name="phoneNumber" id="phoneNumber" required=""></div><div class="col-md-12"><label for="phoneNumber" style="display: none;">Email</label><input type="email" placeholder="Email" class="form-control" name="email" id="email"></div><div class="col-md-12"><label for="phoneNumber" style="display: none;">Ghi chú</label><textarea placeholder="Các yêu cầu đặc biệt không thể được đảm bảo nhưng nhà xe sẽ cố gắng hết sức để đáp ứng yêu cầu của bạn" name="note" class="form-control" id="note" rows="3"></textarea></div><div class="col-md-12"><input autocomplete="off" class="col-md-5 form-control" id="promotionCode" onblur="checkPromotion()" style="width: auto;" type="text" placeholder="Mã khuyến mại"><button type="button" class="btn btn-info col-md-3" id="checkPromotion" onclick="checkPromotion()">Kiểm tra</button></div></div><div class="detail-customer-info"><label class="container-checkbox" for="transshipment">Đón tận nơi - Trả tận nơi<input type="checkbox" id="transshipment"><span class="checkmark"></span></label><div class="content-boxd" style=""><ul class="nav nav-tabs"><li class="active"><a data-toggle="tab" href="#fromstart" aria-expanded="true">Điểm đi</a></li><li class=""><a data-toggle="tab" href="#toend" aria-expanded="false">Điểm đến</a></li></ul><div class="tab-content"><div id="fromstart" class="tab-pane fade active in"><div class="transshipmentOneway"><div class=""><label for="transshipmentInPointOneway">Chọn điểm đón</label><select name="transshipmentInPointOneway" class="form-control transshipment" id="transshipmentInPointOneway"><option data-address="" data-lat="" data-long="" data-price="0" value="">Chọn điểm đón</option><option data-address="Cây xăng Comeco, Điện Biên Phủ, phường 21, Bình Thạnh, Hồ Chí Minh, Việt Nam" data-price="0" data-lat="10.8009371" data-long="106.7132249" value="P08k1qLhg0NzBNc">Cây xăng Comeco - Hàng Xanh</option><option data-address="11 Đặng Văn Sâm, Tân Bình, Hồ Chí Minh, Việt Nam" data-price="0" data-lat="10.8154055" data-long="106.6714633" value="P08k1qLhfIu1ET5">Quán Cafe Nalee (11 Đặng Văn Sâm, Tân Bình)</option><option data-address="28 Nguyễn Cơ Thạch, Quận 2, Hồ Chí Minh, Việt Nam" data-price="0" data-lat="10.7672654" data-long="106.7259246" value="P08k1qLheHB0BOf">Quán Cafe Lúa (Khu đô thị Sala, 28 Nguyễn Cơ Thạch, Quận 2)</option></select></div></div></div><div id="toend" class="tab-pane fade"><div class=""><label for="transshipmentOffPointOneway">Trung chuyển trả chuyến về</label><select name="transshipmentOffPointOneway" class="form-control transshipment" id="transshipmentOffPointOneway"><option data-address="" data-lat="" data-long="" data-price="0" value="">Chọn điểm trả</option></select></div></div></div></div></div></div></div></div></div><div class="col-md-4 payment-info"><div class="col-md-12 customer-info"><h4 class="trip-info ticket-detail">Chi tiết giá vé</h4><div class="total-title"><h4>Lượt đi</h4><div class="total-inside row"><div class="col-md-12">Giá người lớn: <span class="price" id="adultMoneyOneway">640,000 VND</span> <br></div><div class="col-md-12">Giá trẻ em: <span class="price" id="babyMoneyOneWay">0 VND</span> <br></div></div><div class="subtotal">Tổng tiền lượt đi<br><strong id="totalMoneyOneway">640,000 VND</strong></div><div class="col-md-12">Phí trung chuyển: <span class="price" id="transshipmentPriceOneway">0 VND</span> <br></div></div><div class="total-title" id="total-round" style="display:none;"><h4>Lượt về</h4><div class="total-inside row"><div class="col-md-12">Ghế đã chọn: <span class="seatlist" id="gheve"></span> <br></div><div class="col-md-12">Giá người lớn: <span class="price" id="adultMoneyReturn">0 VND</span> <br></div><div class="col-md-12">Giá trẻ em: <span class="price" id="babyMoneyReturn">0 VND</span> <br></div></div><div class="subtotal">Tổng tiền lượt về<br><strong id="totalMoneyReturn">0 VND</strong></div></div><div id="promotion" style="display: none"><h4>Khuyến mãi</h4><div class="promotion-div row"><div class="col-md-12">Giảm giá: <span class="price" id="promotionPrice"></span></div></div></div> 
+                        
+                        <!-- thêm class .final-price vào div này --> 
+                        
+                        <div class="final-price"
+                          
+                          
+                          
+                          ><h4>TỔNG TIỀN</h4><div class="promotion-div row"><div class="col-md-12"><span class="price" id="totalMoney">640,000 VND</span></div></div></div></div><div class="select-seat" id="select-seat-round" style="display: none"><h3 class="trip-info">Thông tin chuyến về</h3><ul><li><strong>Chuyến về</strong></li><li>Ngày đi: <strong class="startDateReturn"></strong></li><li>Tuyến đường: <strong class="routeNameReturn"></strong></li><li>Giờ xuất phát: <strong class="intimeReturn"></strong></li></ul></div><div class="col-md-12 payment"><div class="col-md-12 payment-dialog"><h3 class="trip-info">Thanh toán</h3><div class="payment-form"><div class="radio"><!--<label class="radio">Thanh toán bằng thẻ quốc tế--><!--<input type="radio" class="paymenttype" name="paymenttype" value="2">--><!--<span class="checkround"></span>--><!--</label>--><label class="radio">Thanh toán tại quầy<input type="radio" id="tttq" checked="checked" class="paymenttype" name="paymenttype" value="5"><span class="checkround"></span><p>Nếu không thanh toán sau p sẽ bị hủy vé </p></label><label class="radio" id="radiochuyenkhoan" style="display: none">Chuyển khoản <input type="radio" class="paymenttype" name="paymenttype" value="6"><span class="checkround"></span></label></div><center><button type="button" id="hoanthanhbtn" class="btn" onclick="hoanthanhbtndatve(this)">Xác nhận đặt vé </button><button type="button" style="display: none" id="btnchuyenkhoan" class="btn" data-toggle="modal" data-target="#chuyenkhoan">Thông tin chuyển khoản</button></center></div></div></div></div></div></li></div>
+                    </div>
+
+
+
+                    <div id="trip-round" style="display:block">
+
+
+
+                        <h3 class="chooseticket">2. Lựa chọn chuyến về</h3>
+
+                        <h4 class="trip">
+
+                            <strong class="end"></strong>
+
+                            <span class="scb-to"> Tới: </span>
+
+                            <strong class="start"></strong>
+
+
+
+                           
+
+                        </h4>
+
+                        <div class="oneway-info">
+
+                            <span class="fdate-highlight">
+
+                                Ngày đi: <strong class="endDate"></strong>
+
+                            </span>
+
+                        </div>
+                        
+                        
+
+                        <div class="table-responsive list-trip">
+
+                            <table class="table table-hover table-bordered">
+
+                                <thead>
+
+                                <tr>
+
+                                    <th>Chuyến xe</th>
+
+                                    <th>Loại xe</th>
+
+                                    <th>Khởi hành</th>
+
+                                    <th>Đến</th>
+
+                                    <th>Ghế trống</th>
+
+                                    <th>Giá vé</th>
+
+                                </tr>
+
+                                </thead>
+
+                                <tbody id="list-roundway">
+
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="click-back">
+                    <a href="/dat-ve?routeId=null"><i class="fa fa-chevron-left" aria-hidden="true"></i> Quay lại</a>
+                    </div>
+
+                </div>
+
+                </div>
+
+                
+
+                <div id="next-step" class="scrollDown" style="display: none">
+
+                    <button type="button" class="btn" id="select-seat">Tiếp tục</button>
+
+                    <button type="button" class="btn" id="back">Chọn lại</button>
+
+                </div>
+
+            </div>
+
+            
+
+    </div>
+
+</div>
+
+
+
+<!--Modal-->
+
+<div class="modal fade" id="chuyenkhoan" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="modalLabel">Thông tin chuyển khoản</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <div class="modal-body">
+
+                <h3>Nội dung: <i id="phone"></i> thanh toan ma ve <i id="ticketId"></i></h3>
+
+
+
+                <p><strong>Ngân hàng BIDV</strong></p>
+
+                <p>Chủ tài khoản: VŨ THANH HOÀI - Số tài khoản: 1601 0000 064 640</p>
+
+                <p>Chi nhánh: Ngân hàng BIDV Sở Giao dịch 3</p>
+
+
+
+                <p><strong>Ngân hàng TECHCOMBANK</strong></p>
+
+                <p>Chủ tài khoản: VŨ THANH HOÀI - Số tài khoản: 111 20032107 106</p>
+
+                <p>Chi nhánh: Ngân hàng TECHCOMBANK Hà Nội</p>
+
+
+
+                <p><strong>Ngân hàng VIETCOMBANK</strong></p>
+
+                <p>Chủ tài khoản: VŨ THANH HOÀI - Số tài khoản: 001 10037 90795</p>
+
+                <p>Chi nhánh: Ngân hàng VIETCOMBANK Sở Giao dịch</p>
+
+
+
+                <p><strong>Ngân hàng VIETCOMBANK - Số tài khoản: 150 2205 120668</strong></p>
+
+                <p>Chủ tài khoản: VŨ THANH HOÀI</p>
+
+                <p>Chi nhánh: Ngân hàng AGRIBANK CN Hoàn Kiếm HN</p>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    
+    
+</div> <!-- end my-container -->
+
+<div class="modal fade" id="choosePoint" tabindex="-1" role="dialog" aria-labelledby="chooseLabel" aria-hidden="true">
+
+    <div class="modal-dialog" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="chooseLabel">Chọn tỉnh thành</h5>
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <span aria-hidden="true">&times;</span>
+
+                </button>
+
+            </div>
+
+            <style>
+
+                .selectDistrict {
+
+                    margin-top: 20px;
+
+                }
+
+            </style>
+
+            <div class="modal-body row">
+
+                <div class="col-md-12">
+
+                    <select class="form-control select2" name="provideId" id="provideId">
+
+                        <option value="">Chọn tỉnh thành</option>
+
+                    </select>
+
+                </div>
+
+                <div class="col-md-12 selectDistrict" style="display: none">
+
+                    <select class="form-control select2" name="districtId" id="districtId">
+
+                        <option value="">Chọn quận huyện</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <input type="hidden" id="typePoint">
+
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Đóng</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="modal fade" id="adsModal" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg" role="document">
+
+        <div class="modal-content">
+
+            <div class="modal-body">
+
+                <img src="http://dananhlimousine.vn/themes/22/statics/images/ads.png" style="width: 100%" class="img-responsive img-ads" alt="">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="ui-datepicker-div" class="ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all"></div>
+
+</section>
+
+<script>
+
+        var timeBookHolder = '';
+
+        function myFunction() {
+
+        document.getElementById("myDropdown").classList.toggle("show");
+
+    }
+
+
+
+    companyId = $("base").attr("id");
+
+
+
+    routeId = getParameterByName('routeId');
+
+
+
+    $("#routeIdd").val(routeId);
+
+    if(routeId != ''){
+
+        $.ajax({
+
+            type: "POST",
+
+            url: "https://anvui.vn/pointNX",
+
+            data: {
+
+                routeId: routeId
+
+            },
+
+            success: function (result) {
+
+
+
+                // routeBackId = result.routeBack;
+
+
+
+                //lấy thông tin điểm đầu
+
+                
+
+                $('#startPoint').val(result.a1[0].pointName).change();
+
+                $("#startId").val(result.a1[0].pointId)
+
+
+
+                
+
+                $('#endPoint').val(result.a2[0].pointName).change();
+
+                $("#endId").val(result.a2[0].pointId)
+
+
+
+
+
+
+
+            }
+
+        });
+
+    }
+
+    
+
+
+
+    function filterFunction() {
+
+        var input, filter, ul, li, a, i;
+
+        $(".showDropStartPoint").show();
+
+        input = document.getElementById("startPointD");
+
+        filter = input.value.toUpperCase();
+
+        div = document.getElementById("myDropdown");
+
+        a = div.getElementsByTagName("a");
+
+        for (i = 0; i < a.length; i++) {
+
+            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+
+                a[i].style.display = "";
+
+            } else {
+
+                a[i].style.display = "none";
+
+            }
+
+        }
+
+
+
+    }
+
+    function filterFunctionEndPoint() {
+
+        var input, filter, ul, li, a, i;
+
+        $(".showDropEndPoint").show();
+
+        input = document.getElementById("endPointD");
+
+        filter = input.value.toUpperCase();
+
+        div = document.getElementById("myDropdownEnd");
+
+        a = div.getElementsByTagName("a");
+
+        for (i = 0; i < a.length; i++) {
+
+            if (a[i].innerHTML.toUpperCase().indexOf(filter) > -1) {
+
+                a[i].style.display = "";
+
+            } else {
+
+                a[i].style.display = "none";
+
+            }
+
+        }
+
+
+
+    }
+
+    function selectStartPoint(data){
+
+        startPointId = $(data).data('id');
+
+        startPointname = $(data).data('name');
+
+        $("#startPointD").val(startPointname);
+
+        $("#startId").val(startPointId);
+
+        $(".showDropStartPoint").hide();
+
+
+
+    }
+
+    function selectEndPoint(data){
+
+        endPointId = $(data).data('id');
+
+        endPointname = $(data).data('name');
+
+        $("#endPointD").val(endPointname);
+
+        $("#endId").val(endPointId);
+
+        $(".showDropEndPoint").hide();
+
+
+
+    }
+
+
+
+    $.ajax({
+
+    type: 'POST',
+
+    url: 'https://dobody-anvui.appspot.com/point/get_province_and_point',
+
+    dataType: "json",
+
+    data: JSON.stringify({companyId: 'TC08T1qEunQgs8rW'}),
+
+
+
+    success: function (data) {
+
+
+
+        
+
+
+
+
+
+            provinceData = data.results.result;
+
+            $.each(provinceData, function (index, val) {
+
+               
+
+                $('.showDropStartPoint').append("<a data-Id='" + val.id + "' data-name = '"+val.provinceName+"' onclick = 'selectStartPoint(this)'>" + val.provinceName + "</a>");
+
+
+
+
+
+                $('.showDropEndPoint').append("<a data-Id='" + val.id + "' data-name = '"+val.provinceName+"' onclick = 'selectEndPoint(this)'>" + val.provinceName + "</a>");
+
+
+
+                 
+
+            });
+
+            $.each(provinceData, function (index, val) {
+
+                listDistrict = val.listDistrict;
+
+                $.each(listDistrict, function (index, item) {
+
+
+
+                    $('.showDropStartPoint').append("<a data-Id='" + item.districtId + "' data-name = '"+item.districtName+"' onclick = 'selectStartPoint(this)'>" + item.districtName + "</a>");
+
+
+
+                    $('.showDropEndPoint').append("<a data-Id='" + item.districtId + "' data-name = '"+item.districtName+"' onclick = 'selectEndPoint(this)'>" + item.districtName + "</a>");
+
+                })
+
+            });
+
+
+
+                
+
+            
+
+        
+
+
+
+        }
+
+    });
+
+$("#search-btn-show").click(function(){
+
+alert($("#tags").val());
+
+})
+
+    
+
+    var isRound;
+
+    $(document).ready(function () {
+
+        var dataAds =getAds();
+
+        if(dataAds.length>0){
+
+            $('#adsModal').find('img').attr('src',dataAds[0].link||"http://dananhlimousine.vn/themes/22/statics/images/ads.png");
+
+            $('#adsModal').modal('show');
+
+        }
+
+        $('.img-ads').click(function () {
+
+            $('#adsModal').modal('hide');
+
+        });
+
+        console.log(getAds());
+
+
+
+        $('.select2').select2({
+
+            dropdownParent: $('#choosePoint'),
+
+            width: '100%',
+
+            height: '40px'
+
+        });
+
+
+
+        //Lay danh sach tinh thanh
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: 'https://dobody-anvui.appspot.com/point/get_province_and_point',
+
+            dataType: "json",
+
+            data: JSON.stringify({companyId: 'TC08T1qEunQgs8rW'}),
+
+            success: function (data) {
+
+                provinceData = data.results.result;
+
+                $.each(provinceData, function (index, val) {
+
+                    $('#provideId').append("<option value='" + val.id + "'>" + val.provinceName + "</option>");
+
+                });
+
+            }
+
+        });
+
+
+
+        $('#startPoint').click(function () {
+
+            $('#typePoint').val(1);
+
+            $('#choosePoint').modal('show');
+
+        });
+
+
+
+        $('#endPoint').click(function () {
+
+            $('#typePoint').val(2);
+
+            $('#choosePoint').modal('show');
+
+        });
+
+
+
+        $("#provideId").change(function() {
+
+            var proviceId = $(this).val();
+
+
+
+            $('#districtId').html('<option value="">Chọn điểm</option>');
+
+
+
+            if(proviceId !== '') {
+
+                district = provinceData.filter(function(val) {
+
+                    return val.id === proviceId;
+
+                });
+
+
+
+                if($('#typePoint').val() == 1) {
+
+                    $('#startId').val(proviceId);
+
+                    $('#startPoint').val(district[0].unitName + " " + district[0].provinceName);
+
+                } else {
+
+                    $('#endId').val(proviceId);
+
+                    $('#endPoint').val(district[0].unitName + " " + district[0].provinceName);
+
+                }
+
+
+
+                $.each(district[0].listDistrict, function (index, val) {
+
+                    $('#districtId').append("<option value='" + val.districtId + "'>" + val.districtName + "</option>");
+
+                });
+
+                $('.selectDistrict').show();
+
+            } else {
+
+                $('.selectDistrict').hide();
+
+
+
+                if($('#typePoint').val() == 1) {
+
+                    $('#startId').val('');
+
+                    $('#startPoint').val('');
+
+                } else {
+
+                    $('#endId').val('');
+
+                    $('#endPoint').val('');
+
+                }
+
+            }
+
+        });
+
+
+
+        $("#districtId").change(function() {
+
+            var districtId = $(this).val();
+
+            if(districtId !== '') {
+
+                var districtDetail = district[0].listDistrict.filter(function(val) {
+
+                    return val.districtId === districtId;
+
+                });
+
+                if($('#typePoint').val() == 1) {
+
+                    $('#startId').val(districtId);
+
+                    $('#startPoint').val(districtDetail[0].districtName + ", " + district[0].provinceName);
+
+                } else {
+
+                    $('#endId').val(districtId);
+
+                    $('#endPoint').val(districtDetail[0].districtName + ", " + district[0].provinceName);
+
+                }
+
+
+
+                $('#choosePoint').modal('hide');
+
+            } else {
+
+                if($('#typePoint').val() == 1) {
+
+                    $('#startId').val(district[0].id);
+
+                    $('#startPoint').val(district[0].unitName + " " + district[0].provinceName);
+
+                } else {
+
+                    $('#endId').val(district[0].id);
+
+                    $('#endPoint').val(district[0].unitName + " " + district[0].provinceName);
+
+                }
+
+
+
+            }
+
+
+
+        });
+
+
+
+        $('#depatureDate').val($.format.date(new Date() ,"dd/MM/yyyy"));
+
+
+
+        
+
+
+
+        var isMobile = {
+
+            Android: function() {
+
+                return navigator.userAgent.match(/Android/i);
+
+            },
+
+            BlackBerry: function() {
+
+                return navigator.userAgent.match(/BlackBerry/i);
+
+            },
+
+            iOS: function() {
+
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+
+            },
+
+            Opera: function() {
+
+                return navigator.userAgent.match(/Opera Mini/i);
+
+            },
+
+            Windows: function() {
+
+                return navigator.userAgent.match(/IEMobile/i);
+
+            },
+
+            any: function() {
+
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+
+            }
+
+        };
+
+
+
+        var companyId = TC08T1qEunQgs8rW;
+
+        var urlAndroid = '';
+
+        var urlIOs = '';
+
+        if(companyId == 'TC03h1IzK1jParS')
+
+        {
+
+            urlAndroid = 'https://play.google.com/store/apps/details?id=vn.anvui.phucxuyen';
+
+            urlIOs = 'https://itunes.apple.com/app/id1364355888';
+
+        }
+
+
+
+        if(isMobile.any() != null) {
+
+            if(isMobile.any()[0] == 'Android' && urlAndroid != '')
+
+            {
+
+                window.location.href = urlAndroid;
+
+            }
+
+
+
+            if((isMobile.any()[0] == 'iPhone' || isMobile.any()[0] == 'iPad' || isMobile.any()[0] == 'iPod') && urlIOs != '')
+
+            {
+
+                window.location.href = urlIOs;
+
+            }
+
+        }
+
+
+
+        $('#depatureDate').datepicker({
+
+            dateFormat: 'dd/mm/yy',
+
+            defaultDate: "+0d",
+
+            minDate: 0,
+
+            onSelect: function (dateStr) {
+
+                changeDate(dateStr);
+
+            }
+
+        });
+
+
+
+        $('#returnDate').datepicker({
+
+            dateFormat: 'dd/mm/yy',
+
+            defaultDate: "+0d",
+
+            minDate: 0,
+
+        });
+
+
+
+        //Tìm chuyến
+
+        $('#search-btn').click(function () {
+
+            depatureDate = $('#depatureDate').val();
+
+            returnDate = $('#returnDate').val();
+
+            startPoint = $('#startPoint').val();
+
+            endPoint = $('#endPoint').val();
+
+
+
+            $('.start').html(routeName.split("-")[0]);
+
+            
+
+            $('.end').html(routeName.split("-")[1]);
+
+            $('.startDate').html($('#depatureDate').val());
+
+            $('.startDateReturn').html($('#returnDate').val());
+
+
+
+            if (startPoint === "") {
+
+                $.alert({
+
+                    title: 'Cảnh báo!',
+
+                    type: 'red',
+
+                    typeAnimated: true,
+
+                    content: 'Chưa chọn điểm đi',
+
+                });
+
+                return false;
+
+            }
+
+
+
+            if (endPoint === "") {
+
+                $.alert({
+
+                    title: 'Cảnh báo!',
+
+                    type: 'red',
+
+                    typeAnimated: true,
+
+                    content: 'Chưa chọn điếm đến',
+
+                });
+
+                return false;
+
+            }
+
+
+
+            if (depatureDate === "") {
+
+                $.alert({
+
+                    title: 'Cảnh báo!',
+
+                    type: 'red',
+
+                    typeAnimated: true,
+
+                    content: 'Chưa chọn ngày đi',
+
+                    onClose: function () {
+
+                        $('#depatureDate').datepicker('show');
+
+                    }
+
+                });
+
+
+
+                return false;
+
+            }
+
+
+
+            //có khứ hồi
+
+            if(isRound == 1) {
+
+
+
+                if (returnDate === "") {
+
+                    $.alert({
+
+                        title: 'Cảnh báo!',
+
+                        type: 'red',
+
+                        typeAnimated: true,
+
+                        content: 'Chưa chọn ngày về',
+
+                        onClose: function () {
+
+                            $('#returnDate').datepicker('show');
+
+                        }
+
+                    });
+
+                    return false;
+
+                }
+
+
+
+                $('.endDate').html($('#returnDate').val());
+
+
+
+                $('#trip-round').show();
+
+                $('#total-round').show();
+
+
+
+            }
+
+
+
+            $('#trip-oneway').show();
+
+            $('#next-step').show();
+
+            $('#booking-form').hide();
+
+
+
+        });
+
+
+
+        //chọn khứ hồi
+
+        $('#roundtrip').click(function () {
+
+            isRound = 1;
+
+            $('.selectday').removeClass('selected');
+
+            $(this).addClass('selected');
+
+            $('#returnDate').prop('disabled', false);
+
+            changeDate($('#depatureDate').val());
+
+        });
+
+
+
+        //chọn một chiều
+
+        $('#oneway').click(function () {
+
+            isRound = 0;
+
+            $('.selectday').removeClass('selected');
+
+            $(this).addClass('selected');
+
+            $('#returnDate').val('');
+
+            $('#returnDate').prop('disabled', true);
+
+        });
+
+    });
+
+
+
+    function changeDate(dateStr) {
+
+        if(dateStr === '') {
+
+            return;
+
+        }
+
+        var date_Str = '';
+
+        for (var i = 0; i < 10; i++) {
+
+
+
+            if (i == 1 || i == 0) {
+
+                date_Str += dateStr.charAt(i + 3);
+
+            } else if (i == 3 || i == 4) {
+
+                date_Str += dateStr.charAt(i - 3);
+
+            }
+
+            else date_Str += dateStr.charAt(i);
+
+        }
+
+        if(isRound == 1) {
+
+            $('#returnDate').datepicker("option", {
+
+                minDate: new Date(date_Str)
+
+            });
+
+            $('#returnDate').val(dateStr);
+
+        }
+
+    }
+
+
+
+    function getAds() {
+
+        var companyId = $("base").attr("id");
+
+        var dnow = new Date();
+
+        var d = dnow.getTime();
+
+        var ddata = [];
+
+        $.ajax({
+
+            type: 'POST',
+
+            url: 'https://dobody-anvui.appspot.com/popup/get-list',
+
+            dataType: "json",
+
+            async:false,
+
+            data: JSON.stringify({companyId: companyId,date:d}),
+
+            success: function (data) {
+
+                if(data.code===200){
+
+                    ddata=data.results.popUps;
+
+                }
+
+            }
+
+        });
+
+        return ddata;
+
+    }
+
+
+
+    function getParameterByName(name, url) {
+
+        if (!url) url = window.location.href;
+
+        name = name.replace(/[\[\]]/g, "\\$&");
+
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+
+            results = regex.exec(url);
+
+        if (!results) return null;
+
+        if (!results[2]) return '';
+
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+
+    }
+
+
+
+</script>
+
+<style type="text/css">
+
+    .dropdown-content a {
+
+        color: black;
+
+        padding: 12px 16px;
+
+        text-decoration: none;
+
+        display: block;
+
+    }
+
+    .dropdown-content .showDropStartPoint, .showDropEndPoint {
+
+        position: absolute;
+
+        width: 250px;
+
+        z-index: 9999;
+
+        background: #fff;
+
+        border: 1px solid #ddd;
+
+        top: 40px;
+
+        height: 250px;
+
+        overflow-y: scroll;
+
+    }
+
+</style><!--End Load content-->
+
+
+
+
+
+
+
+
+
+<script src="./js/owl.carousel.min.js"></script>
+
+<section class="footer">
+	<div class="my-container">
+    	<img class="logo" src="svg/dananh-logo-darkbg.svg" alt="Đan Anh Travel & Limousine Transportation" />
+        <div class="info">
+        	<h3>Công ty TNHH Du lịch và Vận tải Đan Anh</h3>
+			<p>
+                54 đường Mai Anh Đào, P.8, Tp. Đà Lạt, Lâm Đồng<br />
+                Điện thoại: (0263) 3 68 33 68 | (0263) 38 00 38<br />
+                Hotline 1900 6799 | 0813 878 878<br />
+                Email: info@danhanhlimousine.com<br />
+                MST: 5801934203
+            </p>
+        </div>
+        <div style="clear:both"></div>
+
+    </div>
+    
+    <div class="copyright">
+    	<p>©2019 - Bản quyền bởi Đan Anh Limousine, thiết kế bởi <a href="https://zoiop.com/"> zoi ộp</a> </p>
+    </div>
+</section>
+
+</body>
+</html>

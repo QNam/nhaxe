@@ -1,0 +1,47 @@
+<!--{if !empty($_home_cat)}-->
+<div class="row">
+	<div class="col-md-8" style="margin-bottom: 30px;">
+		<div class="title">
+			<h3>{$_home_cat[0]['title']}</h3>
+		</div>
+		<div class="owl-carousel owl-theme bus-list">
+			<!--{loop $_home_cat[0]['content_news'] $k $v}-->
+			<div class="item-bus">
+				<a href="$v['link']">
+					<img src="<!--{loadImage $v['img'] resize 570 290}-->" class="img-responsive" style="height: 130px" alt="$v['title']">
+					<h5>$v['title']</h5>
+				</a>
+			</div>
+			<!--{/loop}-->
+		</div>
+	</div>
+	<div class="col-md-4" style="margin-bottom: 30px;">
+		<div class="title">
+			<h3>{$_home_cat[1]['title']}</h3>
+		</div>
+		<div class="travel">
+		<!--{loop $_home_cat[1]['content_news'] $k $v}-->
+			<div class="row item" style="margin-top: 10px;">
+				<a href="$v['link']">
+					<div class="col-md-5">
+						<img src="<!--{loadImage $v['img'] crop 570 290}-->" class="img-responsive" alt="$v['title']">
+					</div>
+					<div class="col-md-7">
+						<p>$v['title']</p>
+					</div>
+				</a>
+			</div>
+		<!--{/loop}-->
+		</div>
+	</div>
+</div>
+<style>
+	.travel {
+		overflow-y: auto;
+		overflow-x: hidden;
+		height: 250px;
+	}
+</style>
+<!--{/if}-->
+
+

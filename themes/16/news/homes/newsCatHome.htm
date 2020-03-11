@@ -1,0 +1,21 @@
+<div class="slide-3">
+	<!--{if !empty($_home_cat)}-->
+	<div class="container" style="margin-bottom: 30px;">
+		<div class="title">
+			<h3>{$_home_cat[0]['title']}</h3>
+		</div>
+		<div class="row">
+			<!--{loop $_home_cat[0]['content_news'] $k $v}-->
+			<div class="item-bus col-md-4">
+				<a href="$v['link']">
+					<img src="<!--{loadImage $v['img'] none 570 290}-->" class="img-responsive" alt="$v['title']">
+					<h5>$v['title']</h5>
+				</a>
+			</div>
+			<!--{/loop}-->
+		</div>
+	</div>
+	<!--{/if}-->
+</div>
+
+

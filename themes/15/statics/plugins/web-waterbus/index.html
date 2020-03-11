@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base id="TC03j1IanqGKIUS">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Waterbus</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800'
+          rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
+          rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="jquery-confirm/dist/jquery-confirm.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/pretty-checkbox.min.css" rel="stylesheet">
+    <link href="css/creative.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/pretty-checkbox.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        header.masthead {
+            background-image: url("img/waterbus/SWB-HP2018.jpg");
+        }
+        #video_background {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            min-height: 100%;
+            width: 100%;
+            height: auto;
+            z-index: -1000;
+            overflow: hidden;
+        }
+        .menu-ltt a{
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" onclick="showTab('#home','.q-tab')">
+            <img src="http://cdn.anvui.vn/uploadv2/web/32/3273/news/2018/03/15/10/46/1521110812_logowater.png"
+                 class="img-responsive logo" alt="Logo">
+        </a>
+        <div class="pull-right menu-ltt">
+            <a href="#" style="padding: 20px" onclick="showTab('.lichtauchay','.q-tab')">LỊCH TÀU CHẠY</a>
+            <a href="#" style="padding: 20px" onclick="showTab('.bando','.q-tab')">BẢN ĐỒ</a>
+        </div>
+    </div>
+</nav>
+
+<div class="q-tab hơme" id="home">
+    <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
+        <source src="img/video/intro.mp4" type="video/webm"/>
+    </video>
+    <!--<div id="map">-->
+
+    <!--</div>-->
+    <div class="container-fluid mt-5 option" id="selectOption" style="display: none">
+        <div class="row justify-content-center">
+            <div class="col-lg-2 col-md-3 col-8">
+                <h5 class="text-center menu-title">Bạn đang cần</h5>
+            </div>
+        </div>
+        <div class="owl-carousel container">
+            <div class="icon-bus">
+                <a href="#" id="active-waterbus">
+                    <p>Tàu Buýt</p>
+                    <img src="img/waterbus/waterbus.png" class="img-thumbnail rounded-circle" alt="">
+                    <p>Saigon Waterbus</p>
+                </a>
+            </div>
+            <div class="icon-bus">
+                <a href="#" id="active-rivertaxi">
+                    <p>Khám phá</p>
+                    <img src="img/waterbus/rivertaxi.png" class="img-thumbnail rounded-circle" alt="">
+                    <p>Explore SaigonRiver</p>
+                </a>
+            </div>
+            <div class="icon-bus">
+                <a href="#" id="active-watertaxi">
+                    <p>Tàu taxi</p>
+                    <img src="img/waterbus/watertaxi.png" class="img-thumbnail rounded-circle" alt="">
+                    <p>Saigon Watertaxi</p>
+                </a>
+            </div>
+
+            <div class="icon-bus">
+                <a href="#" id="active-trolley">
+                    <p>Xe điện</p>
+                    <img src="img/waterbus/saigon_trolley.png" class="img-thumbnail rounded-circle" alt="">
+                    <p>Saigon Trolley</p>
+                </a>
+            </div>
+            <!--<div class="icon-bus">
+                <a href="#" id="active-citybus">
+                    <img src="img/waterbus/waterbus.png" class="img-thumbnail rounded-circle" alt="">
+                    <p>City bus</p>
+                </a>
+            </div>-->
+        </div>
+
+    </div>
+</div>
+
+<div class="q-tab lichtauchay" style="display: none;padding-top: 100px">
+    <img src="img/lichtauchay.jpg" alt="" style="width: 100%">
+</div>
+<div class="q-tab bando" style="display: none;padding-top: 100px">
+    <img src="img/bando.jpg" alt="" style="width: 100%">
+</div>
+
+
+<!--Box dat ve waterbus-->
+<div id="bookingWaterBus" class="booking" style="display: none">
+    <div class="row justify-content-center booing-form">
+        <div class="col-lg-6 col-md-6 col-12 water-bus-form">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <form action="#">
+                <input type="hidden" value="VT04Q1Fcs7AhWNY" id="vehicleType">
+                <div class="col-12">
+                    <select class="form-control form-input" id="startPoint">
+                        <option value="" disabled selected hidden>Chọn bến đi</option>
+                    </select>
+                    <i class="fa fa-neuter fa-icon" aria-hidden="true"></i>
+                </div>
+                <div class="col-12">
+                    <select class="form-control form-input" id="endPoint">
+                        <option value="" disabled selected hidden>Chọn điểm đến</option>
+                    </select>
+                    <i class="fa fa-neuter fa-icon-rotate" aria-hidden="true"></i>
+                </div>
+                <div class="row datepicker-form">
+                    <div class="col-12" id="divStartPoint">
+                        <input type="text" class="form-control form-input datepicker" readonly id="depatureDate">
+                        <i class="fa fa-calendar datepicker-icon" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-6" id="divEndPoint" style="display: none">
+                        <input type="text" class="form-control form-input datepicker" readonly id="returnDate">
+                        <i class="fa fa-calendar datepicker-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="roundForm row">
+                    <div class="col-5" style="margin-top: 5px;">
+                        <div class="pretty p-icon p-smooth">
+                            <input type="checkbox" id="isRound"/>
+                            <div class="state p-danger">
+                                <i class="icon fa fa-check"></i>
+                                <label>Khứ hồi</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-7 row">
+                        <button type="button" class="btn btn-default col-lg-2 col-md-3 col-sm-3 col-xs-2" id="downTicket">-</button>
+                        <input type="text" class="form-control form-input col-lg-4 col-md-6 col-sm-6 col-xs-4" readonly id="numberTicket">
+                        <button type="button" class="btn col-lg-2 col-md-3 col-sm-3 col-xs-4" id="upTicket">+</button>
+                    </div>
+                </div>
+                <div class="buttonForm row justify-content-center">
+                    <button type="button" class="btn btn-default col-lg-6 col-md-6 col-sm-12 col-xs-12 btnForm" id="seachWaterbus">Tìm chuyến</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center list-schedule" style="display: none">
+        <div class="col-lg-6 col-md-6 col-12 water-bus-form">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <h6 class="route-name text-center"></h6>
+            <div class="row title-round no-margin-left-right" style="display: none">
+                <div class="col-6 text-center">
+                    Lượt đi
+                </div>
+                <div class="col-6 text-center">
+                    Lượt về
+                </div>
+            </div>
+            <div class="row no-margin-left-right">
+                <div class="col-12 schedule-list">
+
+                    <div class="loading"></div>
+                </div>
+                <div class="col-6 schedule-list-return" style="display: none">
+
+                    <div class="loading"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center no-margin-left-right positon-btn-next">
+                <button type="button" class="btn btn-default col-lg-6 col-md-6 col-sm-12 col-xs-12 btnNext">Tiếp tục</button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center ticket-info" style="display: none">
+        <div class="col-lg-6 col-md-6 col-12 water-bus-form">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <h6 class="ticket-info-title text-center">Thông tin hành khách</h6>
+            <div class="row no-margin-left-right">
+                <div class="col-12 ticket-info-list">
+
+                </div>
+                <div class="col-12 total-ticket-info">
+                    <div class="col-12 row no-margin-left-right margin-top10 margin-bottom10">
+                        <div class="col-6">
+                            <label>Thành tiền</label>
+                            <input type="text" class="col-12 text-center form-control total-money" readonly>
+                        </div>
+                        <div class="col-6">
+                            <label></label>
+                            <button class="btn btn-default col-12 payment">Mua vé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Box dat ve waterbus-->
+
+<!--Box dat ve Saigonriver-->
+<div id="booingSaigonRiver" class="booking" style="display:none;">
+    <div class="row justify-content-center booing-form">
+        <div class="col-lg-4 col-md-6 col-10 saigon-river-form">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <form action="#">
+                <input type="hidden" value="VT04lBAQshIzA6" id="vehicleType">
+                <div class="col-12">
+                    <input type="text" class="form-control form-input datepicker" readonly id="depatureDateRiver">
+                    <i class="fa fa-calendar datepicker-icon" aria-hidden="true"></i>
+                </div>
+                <div class="col-12 row no-margin-left-right margin-top10">
+                    <button type="button" class="btn btn-default col-lg-2 col-md-3 col-sm-3 col-xs-2" id="downTicket">-</button>
+                    <input type="text" class="form-control form-input col-lg-8 col-md-6 col-sm-6 col-xs-4" readonly id="numberTicket">
+                    <button type="button" class="btn col-lg-2 col-md-3 col-sm-3 col-xs-4" id="upTicket">+</button>
+                </div>
+                <div class="col-12 margin-top40">
+                    <button type="button" class="btn btn-default col-lg-12 col-md-12 col-sm-12 col-xs-12 btnForm" id="seachSaigonRiver">Đồng ý</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center list-schedule" style="display: none">
+        <div class="col-lg-6 col-md-6 col-12 saigon-river-list">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <h6 class="route-name text-center">Lịch trình</h6>
+            <div class="row no-margin-left-right">
+                <div class="col-12 schedule-list">
+
+                    <div class="loading"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center no-margin-left-right positon-btn-next">
+                <button type="button" class="btn btn-default col-lg-6 col-md-6 col-sm-12 col-xs-12 btnNext">Tiếp tục</button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center ticket-info" style="display: none">
+        <div class="col-lg-6 col-md-6 col-12 saigon-river-list">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <h6 class="ticket-info-title text-center">Đặt vé</h6>
+            <div class="row no-margin-left-right">
+                <div class="col-12 ticket-info-list">
+
+                </div>
+                <div class="col-12 total-ticket-info">
+                    <div class="col-12 row no-margin-left-right margin-top10 margin-bottom10">
+                        <div class="col-6">
+                            <label>Thành tiền</label>
+                            <input type="text" class="col-12 text-center form-control total-money" readonly>
+                        </div>
+                        <div class="col-6">
+                            <label></label>
+                            <button class="btn btn-default col-12 payment">Mua vé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End dat ve Saigonriver-->
+
+<!--Box dat ve watertaxi-->
+<div id="bookingWaterTaxi" class="booking" style="display: none">
+    <div class="row justify-content-center booing-form">
+        <div class="col-lg-6 col-md-6 col-12 water-taxi-form">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <form action="#">
+                <input type="hidden" value="VT04h1UvHR0caxg" id="vehicleType">
+                <div class="col-12">
+                    <select class="form-control form-input" id="startPoint">
+                        <option data-lat="10.7753013" data-long="106.7069328" value="P03k1Iq7vRvdDS">Ga Tàu Thủy Bạch Đằng</option>
+                        <option data-lat="10.7970991" data-long="106.7289354" value="P03k1IqIku8fXQ">Ga Tàu Thủy Bình An</option>
+                    </select>
+                    <i class="fa fa-neuter fa-icon" aria-hidden="true"></i>
+                </div>
+                <div class="col-12">
+                    <select class="form-control form-input" id="endPoint">
+                        <option data-lat="10.7970991" data-long="106.7289354" value="P03k1IqIku8fXQ">Ga Tàu Thủy Bình An</option>
+                        <option data-lat="10.7753013" data-long="106.7069328" value="P03k1Iq7vRvdDS">Ga Tàu Thủy Bạch Đằng</option>
+                    </select>
+                    <i class="fa fa-neuter fa-icon-rotate" aria-hidden="true"></i>
+                </div>
+                <div class="row datepicker-form">
+                    <div class="col-12">
+                        <input type="text" class="form-control form-input datepicker" readonly id="depatureDateTaxi">
+                        <i class="fa fa-calendar datepicker-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="col-12 row no-margin-left-right margin-top10">
+                    <button type="button" class="btn btn-default col-lg-2 col-md-3 col-sm-3 col-xs-2" id="downTicket">-</button>
+                    <input type="text" class="form-control form-input col-lg-8 col-md-6 col-sm-6 col-xs-4" readonly id="numberTicket">
+                    <button type="button" class="btn col-lg-2 col-md-3 col-sm-3 col-xs-4" id="upTicket">+</button>
+                </div>
+                <div class="buttonForm row justify-content-center">
+                    <button type="button" class="btn btn-default col-lg-6 col-md-6 col-sm-12 col-xs-12 btnForm" id="seachWaterTaxi">Tìm chuyến</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row justify-content-center list-schedule" style="display: none">
+        <div class="col-lg-6 col-md-6 col-12 water-bus-form">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <h6 class="route-name text-center"></h6>
+            <div class="row no-margin-left-right">
+                <div class="col-12 schedule-list">
+
+                    <div class="loading"></div>
+                </div>
+            </div>
+            <div class="row justify-content-center no-margin-left-right positon-btn-next">
+                <button type="button" class="btn btn-default col-lg-6 col-md-6 col-sm-12 col-xs-12 btnNext">Tiếp tục</button>
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center ticket-info" style="display: none">
+        <div class="col-lg-6 col-md-6 col-12 water-bus-form">
+            <a href="#" class="backScreen"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <h6 class="ticket-info-title text-center">Đặt vé</h6>
+            <div class="row no-margin-left-right">
+                <div class="col-12 ticket-info-list">
+
+                </div>
+                <div class="col-12 total-ticket-info">
+                    <div class="col-12 row no-margin-left-right margin-top10 margin-bottom10">
+                        <div class="col-6">
+                            <label>Thành tiền</label>
+                            <input type="text" class="col-12 text-center form-control total-money" readonly>
+                        </div>
+                        <div class="col-6">
+                            <label></label>
+                            <button class="btn btn-default col-12 payment">Mua vé</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Box dat ve watertaxi-->
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="owlcarousel/dist/owl.carousel.min.js"></script>
+<script src="jquery-confirm/dist/jquery-confirm.min.js"></script>
+<script src="js/jquery-dateformat.min.js"></script>
+
+<!-- Custom scripts for this template -->
+<script src="js/creative.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.datepicker-vi.js"></script>
+<script src="js/map.module.js"></script>
+<script src="js/core.js"></script>
+
+<!--Module waterbus-->
+<script src="js/waterbus/waterbus.module.min.js"></script>
+<!--End waterbus-->
+
+<!--Module saigonriver-->
+<script src="js/saigonriver/saigonriver.module.min.js"></script>
+<!--End saigonriver-->
+
+<!--Module watertaxi-->
+<script src="js/watertaxi/watertaxi.module.min.js"></script>
+<!--End watertaxi-->
+
+<!--Module watertaxi-->
+<script src="js/trolley/trolley.module.js"></script>
+<!--End watertaxi-->
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZKcLL5G9t6MGhYHwl7JN50LEhvDysIZ8">
+</script>
+</body>
+
+</html>

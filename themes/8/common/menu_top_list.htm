@@ -1,0 +1,9 @@
+<li id="menu-item-389" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-389"><a href="{$v['link']}">{$v['namemenu']}</a>
+    <!--{if isset($v['sub']) AND count($v['sub']) > 0 }-->
+    <ul class="sub-menu">
+        <!--{loop $v['sub'] $k $v2}-->
+        <li id="menu-item-575" class="menu-item menu-item-type-post_type menu-item-object-destination menu-item-575"><a href="{$v2['namemenu']}">{$v2['namemenu']}</a></li>
+        <!--{/loop}-->
+    </ul>
+    <!--{/if}-->
+</li>

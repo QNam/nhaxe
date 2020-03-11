@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Đan Anh Limousine</title>
+    
+	<link rel='stylesheet'  href='./css/bootstrap.min.css' type='text/css' media='all' />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel='stylesheet'  href='./css/fix-bootstrap.css' type='text/css' media='all' />
+
+	<link rel='stylesheet'  href='./css/owl.carousel.min.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/owl.theme.default.css' type='text/css' media='all' />
+	
+    
+      <!-- theme-css -->    
+    <link rel='stylesheet'  href='./css/style.css' type='text/css' media='all' />
+
+    <!--
+    <link rel='stylesheet'  href='./css/main.css' type='text/css' media='all' />
+    <link rel='stylesheet'  href='./css/max460.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/max800.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/max1023.css' type='text/css' media='all' />
+	<link rel='stylesheet'  href='./css/max1365.css' type='text/css' media='all' />
+    -->
+    
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/main.js"></script>
+	
+	
+
+	<script>
+    if(navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)  
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i)) 
+      {
+    document.write('<meta name="viewport" content="width=460,maximum-scale=1.0,user-scalable=yes">');
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="transition top-menu" id="top-menu">
+	<div class="my-container">
+    	<a href="">
+        <div class="logo transition">
+        
+            <img class="logo-mark transition" src="svg/dananh-logomark.svg" />
+            <h1 class="logo-type transition">DAN ANH</h1>
+        </div>
+        </a>
+        <div class="menu-burger">&nbsp;</div>
+        
+        <div class="nav-menu">
+            <ul class="menu-content">
+                <li><a href="index.html" >Trang chủ</a></li>
+                <li><a href="/dat-ve?routeId=R08Y1qGtOdpzRoX" >Đặt chỗ trực tuyến</a></li>
+                <li><a href="info.html" >Chúng tôi</a></li>
+                <li><a href="news.html" >Tin tức & Cộng đồng</a></li>
+                <li><a href="contact.html" >Liên hệ</a></li>
+            </ul>
+        </div>
+        <div style="clear:both"></div>
+    </div>
+</div>
+
+
+<section class="contact-page">
+	<div class="my-container">
+    	<div class="title-block">
+        	<h2>Liên hệ</h2>
+        </div>
+        
+        
+        
+        <div class="contact-form">
+        	<div class="location-info">
+            
+            	<div class="map">
+                	<div id="map"></div>
+                </div>
+                
+                 <script>
+				// Initialize and add the map
+				function initMap() {
+				  // The location of Uluru
+				  var uluru = {lat: 11.977240, lng:108.446770};
+				  // The map, centered at Uluru
+				  var map = new google.maps.Map(
+					  document.getElementById('map'), {zoom: 16, center: uluru});
+				  // The marker, positioned at Uluru
+				  var marker = new google.maps.Marker({position: uluru, map: map});
+				}
+					</script>
+					<script async defer
+					src="https://maps.googleapis.com/maps/api/js?key=[API-KEY]&callback=initMap">
+					</script>
+                
+            	<article class="address">
+                	<h3>CÔNG TY TNHH Du Lịch Và Vận Tải Đan Anh</h3>
+                    <p>
+                    Địa chỉ: Số 54, đường Mai Anh Đào, Phường 8,
+					Thành phố Đà Lạt, Tỉnh Lâm Đồng<br />
+                    Mã số doanh nghiệp: 5801394203<br />
+                    Tel: (0263) 3 68 33 68 | (0263) 38 000 38<br />
+                    Hotline: 1900 6799 | 0813 878 878<br />
+                    Email: info@dananhlimousine.vn<br />
+                   	</p>
+                </article>
+            </div>
+            
+            <!-- Contact form từ anvui, không có sự thay đổi class hoặc id của html element -->
+        
+            <div class="box-contact col-md-6">
+                <form class="form-horizontal no-padding" action="" id="form_contact" method="POST" name="register">
+                    <div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="txtName">Họ và tên<span style="color:red"> * </span></label>
+                            <div class="col-md-9">
+                                <input id="txtName" name="txtName" type="text" placeholder="Nhập họ tên.." class="form-control input-md">
+                                <div class="warning" id="nameError" style="display:none"><span style="color: red;">Bạn chưa nhập tên</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="txtPhone">Điện thoại<span
+                                    style="color:red"> * </span></label>
+                            <div class="col-md-9">
+                                <input id="txtPhone" name="txtPhone" type="text" placeholder="Nhập số điện thoại"
+                                       class="form-control input-md" class='number'>
+                                <div class="warning" id="phoneError" style="display:none"><span style="color: red;">Bạn chưa nhập số điện thoại</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="txtEmail">Email<span
+                                    style="color:red"> * </span></label>
+                            <div class="col-md-9">
+                                <input id="txtEmail" name="txtEmail" type="text" placeholder="Nhập email..."
+                                       class="form-control input-md">
+                                <div class="warning" id="emailError" style="display:none"><span style="color: red;">Email không hợp lệ</span>
+                                </div>
+                                <div class="warning" id="emailNull" style="display:none"><span style="color: red;">Bạn chưa nhập email</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Text input-->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="txtAddress">Địa chỉ<span
+                                    style="color:red"> * </span></label>
+                            <div class="col-md-9">
+                                <input id="txtAddress" name="txtAddress" type="text" placeholder="Nhập địa chỉ..."
+                                       class="form-control input-md">
+                                <div class="warning" id="addressError" style="display:none"><span
+                                        style="color: red;">Bạn chưa nhập địa chỉ</span></div>
+                            </div>
+                        </div>
+                        <!-- Textarea -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="txtContent">Nội dung<span
+                                    style="color:red"> * </span></label>
+                            <div class="col-md-9">
+                                <textarea class="form-control" id="txtContent" name="txtContent"></textarea>
+                                <div class="warning" id="contentError" style="display:none"><span
+                                        style="color: red;">Bạn chưa nhập nội dung</span></div>
+                            </div>
+                        </div>
+                        <div class="form-group check_capcha" check_capcha=
+                        "http://dananhlimousine.vn/contact-ajax-checkCaptcha" >
+                            <label class="col-md-3 control-label" for="textinput">Mã xác thực</label>
+                            <div class="col-md-9">
+                                <img id="capt_img_ct" src="http://dananhlimousine.vn/home-captcha.html"/>
+                                <img title="Tải lại mã bảo vệ" id="f5capt_cha" src="https://cdn-gd-v2.webbnc.net/modules/contact/themes/resource/img/view-refresh-small.png"/>
+                                <div style="float: left; padding: 1px 5px 0 0; width: 40%;">
+                                    <input type="text"  class="form-control" id="captcha_cha" value=""/>
+                                </div>
+                                <div class="warning" id="capchaError" style="display:none"><span style="color: red;">Bạn chưa nhập hoặc nhập không đúng mã capcha</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="btnSent"></label>
+                            <div class="col-md-9 ">
+                                <button id="btnSent" type="submit" name="action" class="btn btn-primary" value="addContat">Gửi</button>
+                                <button type="reset" id="btnCancel" name="btnSent" class="btn btn-primary">Hủy</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- hết contact form -->
+            
+            
+            <div style="clear:both"></div>
+		</div>
+
+    </div>
+</section>
+
+
+<section class="footer">
+	<div class="my-container">
+    	<img class="logo" src="svg/dananh-logo-darkbg.svg" alt="Đan Anh Travel & Limousine Transportation" />
+        <div class="info">
+        	<h3>Công ty TNHH Du lịch và Vận tải Đan Anh</h3>
+			<p>
+                54 đường Mai Anh Đào, P.8, Tp. Đà Lạt, Lâm Đồng<br />
+                Điện thoại: (0263) 3 68 33 68 | (0263) 38 00 38<br />
+                Hotline 1900 6799 | 0813 878 878<br />
+                Email: info@danhanhlimousine.com<br />
+                MST: 5801934203
+            </p>
+        </div>
+        <div style="clear:both"></div>
+
+    </div>
+    
+    <div class="copyright">
+    	<p>©2019 - Bản quyền bởi Đan Anh Limousine, thiết kế bởi <a href="https://zoiop.com/"> zoi ộp</a> </p>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<div class="av-info-news "">
+    <div class="i-news">
+        <div class="wrap_news">
+            <div class="div_title">
+                <h2>$_home_cat[0]['title']</h2></div>
+            <div id="slider_new2" class="w_effect_up">
+                <div class="item row">
+                    <!--{eval $i=0}-->
+                    <!--{loop $_home_cat[0]['content_news'] $k $v}-->
+                    <!--{if $i < 4}-->
+                    
+
+                    <div class="w-item col-md-6">
+                        <div class="i-image" >
+                            <a  href="$v['link']">
+                              <img src="<!--{loadImage $v['img'] none 570 290}-->" alt="$v['title']" />
+                              <span class="date"><meta itemprop="datePublished" content="$v['create_time']" /><span>$v['create_day']</span>$v['create_md']</span>
+                            </a>
+                        </div>
+                        <div class="i-desc">
+                            <div class="w-desc">
+                                <div class="i-title">
+                                    <h3 itemprop="headline"><a href="$v['link']">$v['title']</a></h3></div>
+                                <div class="i-content" itemprop="description"><!--{cutString $v['short'] 0 75}--></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--{/if}-->
+                    <!--{eval $i++}-->
+                    <!--{/loop}-->
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="av-info" style="height: 484px;">
+        <div class="div_title">
+            <h2>$_home_cat[1]['title']</h2></div>
+            <div class="list_info">
+           		<div id="slider_new2" class="w_effect_up">
+                <div class="item row">
+                    <!--{eval $i=0}-->
+                    <!--{loop $_home_cat[1]['content_news'] $k $v}-->
+                    <!--{if $i < 4}-->
+                    
+
+                    <div class="w-item col-md-6">
+                        <div class="i-image" >
+                            <a  href="$v['link']">
+                              <img src="<!--{loadImage $v['img'] none 570 290}-->" alt="$v['title']" />
+                              <span class="date"><meta itemprop="datePublished" content="2018-02-21" /><span>21</span>02/2018</span>
+                            </a>
+                        </div>
+                        <div class="i-desc">
+                            <div class="w-desc">
+                                <div class="i-title">
+                                    <h3 itemprop="headline"><a href="$v['link']">$v['title']</a></h3></div>
+                                <div class="i-content" itemprop="description"><!--{cutString $v['short'] 0 75}--></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--{/if}-->
+                    <!--{eval $i++}-->
+                    <!--{/loop}-->
+                    
+                </div>
+            </div>
+            </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $("#slide-box").owlCarousel({
+
+        autoPlay: 3000, //Set AutoPlay to 3 seconds
+
+        items: 3,
+        itemsDesktop: [1199, 3],
+        itemsDesktopSmall: [979, 3]
+
+    });
+
+});
+</script>
+

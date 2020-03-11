@@ -1,0 +1,302 @@
+<!--{if $mod !='home'}-->
+	<style type="text/css">
+		.home{
+			display: none !important;
+		}
+		.container.bg-3 {
+		    padding-top: 150px;
+		}
+		.navbar{
+			border-bottom: 1px solid rgba(33,37,41,.1);
+    		background-color: #fff;
+		}
+	</style>
+<!--{else}-->
+	<style type="text/css">
+		.footer-wrapper{
+			display: none;
+		}
+	</style>
+<!--{/if}-->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top" onclick="showTab('#home','.q-tab')">
+            <img src="http://cdn.anvui.vn/uploadv2/web/32/3273/news/2018/03/15/10/46/1521110812_logowater.png"
+                 class="img-responsive logo" alt="Logo">
+        </a>
+        <div class="pull-right menu-ltt">
+            <!--{temp common/menu_top}-->
+        </div>
+    </div>
+</nav>
+<div class="qc_app">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <a href="" class="logo2"><img src="{$web['static_temp']}/{$web['temp']}/statics/images/1x/logo1.png"></a>
+            </div>
+            <div class="col-md-4 text-header">
+                <p class="fs">Ra mắt ứng dụng thông minh</p>
+                <p class="bt">Đặt vé đi tàu thủy</p>
+            </div>
+            <div class="col-md-4">
+                <a href=""><img src="{$web['static_temp']}/{$web['temp']}/statics/images/1x/app1.png?v=1"></a>
+                <a href=""><img src="{$web['static_temp']}/{$web['temp']}/statics/images/1x/app.png?v=1"></a>
+            </div>
+            <div class="col-md-2">
+                <img src="{$web['static_temp']}/{$web['temp']}/statics/images/1x/qrcode.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="wp-forrmdv">
+    <div class="container">
+        <div id="bookingWaterBus" class="forrmdvd">
+            <form action="#">
+                <input type="hidden" value="VT04Q1Fcs7AhWNY" id="vehicleType">
+                <div class="roundForm" style="margin-top: 0px; padding-right: 15px;">
+                    <div class="col-5" style="margin-top: 5px; display: none;">
+                        <div class="pretty p-icon p-smooth">
+                            <input type="checkbox" id="isRound"/>
+                            <div class="state p-danger">
+                                <i class="icon fa fa-check"></i>
+                                <label>Khứ hồi</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="">
+                        <p>Số lượng khách</p>
+                        <select class="form-control form-input" id="numberTicket">
+                            <option value="1">01 hành khách</option>
+                            <option value="2">02 hành khách</option>
+                            <option value="3">03 hành khách</option>
+                            <option value="4">04 hành khách</option>
+                            <option value="5">05 hành khách</option>
+                            <option value="6">06 hành khách</option>
+                            <option value="7">07 hành khách</option>
+                            <option value="8">08 hành khách</option>
+                            <option value="9">09 hành khách</option>
+                            <option value="10">10 hành khách</option>
+                            <option value="11">11 hành khách</option>
+                            <option value="12">12 hành khách</option>
+                            <option value="13">13 hành khách</option>
+                            <option value="14">14 hành khách</option>
+                            <option value="15">15 hành khách</option>
+                            <option value="16">16 hành khách</option>
+                            <option value="17">17 hành khách</option>
+                            <option value="18">18 hành khách</option>
+                            <option value="19">19 hành khách</option>
+                            <option value="20">20 hành khách</option>
+                        </select>
+                        <i class="fa fa-lg fa-chevron-down"></i>
+                        
+                    </div>
+                </div>
+                <div class="itemseachstarpoint">
+                    <p>Điểm đón khách</p>
+                    <select class="form-control form-input" id="startPoint">
+                        <option value="" >Chọn bến đi</option>
+                    </select>
+                    <i class="fa fa-lg fa-chevron-down"></i>
+                </div>
+                <div class="itemseachendpoint">
+                    <p>Điểm đến</p>
+                    <select class="form-control form-input" id="endPoint">
+                        <option value="" >Chọn điểm đến</option>
+                    </select>
+                    <i class="fa fa-lg fa-chevron-down"></i>
+                </div>
+                <div class=" datepicker-form itemseachdaystarpoint">
+                    
+                    <div class="" id="divStartPoint">
+                        <p>Thời gian khởi hành</p>
+                        <input type="text" class="form-control form-input datepicker" readonly id="depatureDate">
+                        
+                    </div>
+                    <div class="col-6" id="divEndPoint" style="display: none">
+                        <input type="text" class="form-control form-input datepicker" readonly id="returnDate">
+                        <i class="fa fa-calendar datepicker-icon" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                <div class="buttonForm  justify-content-center">
+                    <button type="button" class="btn btn-default col-lg-6 col-md-6 col-sm-12 col-xs-12 btnForm" id="seachWaterbus">Tiến hành đặt vé</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+bnc_position_block_5
+<div id="social" class="follow-scroll-social hidden-xs">
+    <div class="social-top">
+        <a href="https://www.facebook.com/Saigon-Waterbus-372297579856435/" rel="nofollow" target="_blank" title="Fcebook" class="seoquake-nofollow">
+            <div class="facebook icon">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </div>
+        </a>
+        
+        <a href="https://www.youtube.com/channel/UCbY8MVXeEVJoUlfQgayEiEA?view_as=subscriber" rel="nofollow" target="_blank" title="Youtube" class="seoquake-nofollow">
+            <div class="youtube icon">
+               <i class="fa fa-youtube-square" aria-hidden="true"></i>
+            </div>
+        </a>
+        <a href="https://www.instagram.com/saigonwaterbus/" rel="nofollow" target="_blank"  class="seoquake-nofollow">
+            <div class="guide icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+        </a>
+    </div>
+    <div class="social-bot show1">
+    </div>
+    <!-- social -->
+</div>
+
+<style type="text/css">#social {
+    position: fixed;
+    right: 0;
+    top: 250px!important;
+    z-index: 9999;
+}
+.social-top {
+    width: 40px;
+}
+.social-top .icon {
+    background: #fff;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 12px;
+    background-position: left top;
+    -webkit-transition: width .2s;
+    position: absolute;
+    right: 0;
+    font-size: 16px !important;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left:1px dashed #a5a5a5; 
+}
+.social-top .icon:last-child {
+    border-bottom:1px dashed #a5a5a5; 
+}
+.social-top .facebook {
+    top: 0px !important;
+    color: #3b5897;
+    border-top:1px dashed #a5a5a5; 
+}
+.social-top .facebook:hover {
+    top: 0!important;
+    color: #fff;
+    background: #3b5897;
+    border-left:1px solid #3b5897; 
+    border-top:1px dashed #3b5897; 
+    border-bottom:1px dashed #3b5897;   
+}
+.social-top .google {
+    top: 80px !important;
+    color: #f0433a;
+}
+.social-top .google:hover {
+    top: 80px !important;
+    color: #fff;
+    background: #f0433a;
+    border-left:1px solid #f0433a; 
+    border-top:1px dashed #f0433a; 
+    border-bottom:1px dashed #f0433a; 
+}
+.social-top .twister {
+    top: 120px !important;
+    color: #1da1f2;
+}
+.social-top .twister:hover {
+    top: 120px !important;
+    color: #fff;
+    background: #1da1f2;
+    border-left:1px solid #1da1f2; 
+    border-top:1px dashed #1da1f2; 
+    border-bottom:1px dashed #1da1f2; 
+}
+.social-top .youtube {
+    top: 42px !important;
+    color: #cb2027;
+}
+.social-top .youtube:hover {
+    top: 160px !important;
+    color: #fff;
+    background: #cb2027;
+    border-left:1px solid #cb2027; 
+    border-top:1px dashed #cb2027; 
+    border-bottom:1px dashed #cb2027; 
+}
+.social-top .guide {
+    top: 82px !important;
+    color: #fc7700;
+}
+.social-top .guide:hover {
+    top: 200px !important;
+    color: #fff;
+    background: #fc7700;
+    border-left:1px solid #fc7700; 
+    border-top:1px dashed #fc7700; 
+    border-bottom:1px dashed #fc7700; 
+}
+.social-top .messenger   {
+    top: 40px !important;
+    color: #0084ff !important;
+}
+.social-top .messenger:hover {
+    top: 40px !important;
+    color: #fff;
+    background: #0084ff;
+    border-left:1px solid #0084ff; 
+    border-top:1px dashed #0084ff; 
+    border-bottom:1px dashed #0084ff; 
+}
+.social-top a .messenger:hover  {
+    color: #fff !important;
+}
+.social-bot {
+    position: absolute;
+    top: 245px;
+    right: 16px;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-indent: -9999em;
+    text-align: left;
+    cursor: pointer;
+    opacity: 0.7;
+}
+#social .show1 {
+    background: url(../img/arrow-full.png) -14px 3px;
+}
+#social .show2 {
+    background: url(../img/arrow-full.png) 0 3px;
+}
+.i-call {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background: #F44336;
+    text-align: center;
+    height: 45px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    line-height: 45px; 
+    z-index:10;
+}
+.i-call a {
+    color: #fff;
+}
+.i-call a i {
+    padding-top: 7px;
+}
+.i-call a span {
+    font-size: 15px;
+}</style>

@@ -1,0 +1,14 @@
+<!--{if isset($v['sub']) AND count($v['sub']) > 0 }-->
+<li class="dropdown-d">
+ <a href="{$v['link']}" class="dropdown-toggle-d">{$v['namemenu']}<span class="caret"></span></a>
+ <ul class="dropdown-menu-d">
+ 	<!--{loop $v['sub'] $k $v2}-->
+    <!--{temp common/menu_top_list_list}-->
+    <!--{/loop}-->
+ </ul>
+</li>
+<!--{else}-->
+<li class="hidden-xs">
+ <a href="{$v['link']}">{$v['namemenu']}</a>
+</li>
+<!--{/if}-->

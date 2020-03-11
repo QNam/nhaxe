@@ -1,0 +1,401 @@
+<div class="container bg-3">
+    <div id="booking-form" style="display: block">
+        <h3><i class="fa fa-bus fa-5"></i> Đặt vé online</h3>
+        <form action="#" id="search-form">
+            <div class="row chonchieu" style="display: none">
+                <button type="button" class="btn btn-oder selectday selected" id="oneway">Một chiều</button>
+                <!--<button type="button" class="btn btn-oder selectday" id="roundtrip">Khứ hồi</button>-->
+            </div>
+            <div class="row chuyen" id="control-bg">
+                <div class="clearfix">
+                    <div class="col-md-4">
+                        <label for="routeId">Chuyến</label>
+                        <select class="form-control" name="routeId" id="routeId">
+                            <option value="">Chọn chuyến</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="startPoint">Điểm xuất phát</label>
+                        <select class="form-control" name="startPoint" id="startPoint">
+                            <option value="">Điểm xuất phát</option>
+                        </select>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="endPoint">Điểm đến</label>
+                        <select class="form-control" name="endPoint" id="endPoint">
+                            <option value="">Điểm đến</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="clearfix" style="margin-top: 10px">
+                    <div class="col-md-4">
+                        <label for="depatureDate">Ngày đi</label>
+                        <input type="text" class="form-control datepicker" name="depatureDate" id="depatureDate" readonly>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="depatureDate">&nbsp;</label>
+                        <div class="col-md-12">
+                            <div class="col-xs-6"><button class="btn btn-warning" type="button" id="today">Hôm Nay</button></div>
+                            <div class="col-xs-6"><button class="btn btn-warning"  type="button" id="tomorrow">Ngày Mai</button></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="hidden" id="isRoundTrip" name="isRoundTrip">
+                        <button type="button" class="btn" id="search-btn">TÌM CHUYẾN XE</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
+    <div id="select-trip">
+        <div id="trip-oneway" style="display: none">
+            <h3 class="chooseticket">1. Lựa chọn chuyến đi</h3>
+            <h4 class="trip">
+                <strong class="start"></strong>
+                <span class="scb-to"> Tới: </span>
+                <strong class="end"></strong>
+            </h4>
+            <div class="oneway-info">
+                <span class="fdate-highlight">
+                    Ngày đi: <strong class="startDate"></strong>
+                </span>
+            </div>
+            <div class="table-responsive list-trip">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Chuyến xe</th>
+                        <th>Khởi hành</th>
+                        <th>Đến</th>
+                        <th>Ghế trống</th>
+                        <th>Giá vé</th>
+                    </tr>
+                    </thead>
+                    <tbody id="list-oneway">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="trip-round" style="display: none">
+            <h3 class="chooseticket">2. Lựa chọn chuyến về</h3>
+            <h4 class="trip">
+                <strong class="end"></strong>
+                <span class="scb-to"> Tới: </span>
+                <strong class="start"></strong>
+            </h4>
+            <div class="oneway-info">
+                <span class="fdate-highlight">
+                    Ngày đi: <strong class="endDate"></strong>
+                </span>
+            </div>
+            <div class="table-responsive list-trip">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th>Chuyến xe</th>
+                        <th>Khởi hành</th>
+                        <th>Đến</th>
+                        <th>Ghế trống</th>
+                        <th>Giá vé</th>
+                    </tr>
+                    </thead>
+                    <tbody id="list-roundway">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="next-step" class="scrollDown" style="display: none">
+            <button type="button" class="btn" id="select-seat">Tiếp tục</button>
+            <button type="button" class="btn" id="back">Chọn lại</button>
+        </div>
+    </div>
+    <div id="select-seat-oneway" style="display: none">
+        <div class="col-md-8">
+            <div class="select-seat">
+                <h3 class="trip-info">Thông tin chuyến đi</h3>
+                <ul style="width: 100%">
+                    <li><strong>Chuyến đi</strong></li>
+                    <li>Ngày đi: <strong class="startDate">31/03/2018</strong></li>
+                    <li>Tuyến đường: <strong class="routeName"></strong></li>
+                    <li>Giờ xuất phát: <strong class="intime">21:45</strong></li>
+                </ul>
+            </div>
+            <div class="select-seat" id="select-seat-round" style="display: none">
+                <h3 class="trip-info">Thông tin chuyến về</h3>
+                <ul>
+                    <li><strong>Chuyến về</strong></li>
+                    <li>Ngày đi: <strong class="startDateReturn"></strong></li>
+                    <li>Tuyến đường: <strong class="routeNameReturn"></strong></li>
+                    <li>Giờ xuất phát: <strong class="intimeReturn"></strong></li>
+                </ul>
+            </div>
+            <div class="select-seat">
+                <h3 class="trip-info">Thông tin hành khách</h3>
+                <p style="padding-left: 15px; padding-bottom: 20px;">Quý khách vui lòng nhập thông tin chính xác </p>
+                <div class="row form-customer">
+                    <div class="col-md-6">
+                        <label for="fullname">Họ và tên (<span class="required">*</span>)</label>
+                        <input type="text" placeholder="Họ và tên" class="form-control" name="fullname" id="fullname" autofocus required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="phoneNumber">Số điện thoại (<span class="required">*</span>)</label>
+                        <input type="text" placeholder="Số điện thoại" class="form-control" name="phoneNumber" id="phoneNumber" required>
+                    </div>
+                    <!--<div class="col-md-4">-->
+                    <!--<label for="">Email</label>-->
+                    <!--<input type="hidden" placeholder="Email" class="form-control" name="email" id="email">-->
+                    <!--</div>-->
+
+                    <div class="col-md-12">
+                        <label class="container-checkbox" for="transshipment">Đưa đón tại đúng địa chỉ
+                            <input type="checkbox" id="transshipment">
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+                    <div class="transshipmentOneway">
+                        <div class="col-md-6">
+                            <label for="transshipmentInPointOneway">Chọn điểm đón</label>
+                            <select name="transshipmentInPointOneway" disabled class="form-control transshipment" id="transshipmentInPointOneway">
+                                <option data-address="" data-lat="" data-long="" data-price="0" value="">Chọn điểm đón</option>
+                            </select>
+                        </div>
+                        <!--<div class="col-md-6">-->
+                        <!--<label for="transshipmentOffPointOneway">Trung chuyển trả chuyến đi</label>-->
+                        <!--<select name="transshipmentOffPointOneway" disabled class="form-control transshipment" id="transshipmentOffPointOneway">-->
+                        <!--<option data-address="" data-lat="" data-long="" data-price="0" value="">Chọn điểm trả</option>-->
+                        <!--</select>-->
+                        <!--</div>-->
+                    </div>
+                    <div class="transshipmentReturn" style="display: none">
+                        <div class="col-md-6">
+                            <label for="transshipmentInPointReturn">Trung chuyển đón chuyến về</label>
+                            <select name="transshipmentInPoint" disabled class="form-control transshipment" id="transshipmentInPointReturn">
+                                <option data-address="" data-lat="" data-long="" data-price="0" value="">Chọn điểm đón</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="transshipmentOffPointReturn">Trung chuyển trả chuyến về</label>
+                            <select name="transshipmentOffPointReturn" disabled class="form-control transshipment" id="transshipmentOffPointReturn">
+                                <option data-address="" data-lat="" data-long="" data-price="0" value="">Chọn điểm trả</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <input autocomplete="off" class="col-md-5 form-control" id="promotionCode" style="width: auto;" type="text" placeholder="Mã khuyến mại">
+                        <button type="button" class="btn btn-info col-md-3" id="checkPromotion">Kiểm tra</button>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <label for="phoneNumber">Ghi chú</label>
+                    <textarea placeholder="VD : Khối 1, thị trấn Anh Sơn..." name="note" class="form-control" id="note" rows="3"></textarea>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="select-seat">
+                <h3 class="trip-info">Chọn ghế chuyến đi</h3>
+                <p style="padding-left: 15px; padding-bottom: 20px; font-style: italic">* Trẻ em cao trên 1,3m vẫn được tính chỗ và giá vé bằng vé người lớn. </p>
+                <ul class="chuthich">
+                    <li><div class="ghetrong"></div> Ghế trống</li>
+                    <li><div class="ghedachon"></div> Ghế đã chọn</li>
+                    <li><div class="ghedaban"></div> Ghế đã bán</li>
+                    <!--<li><div class="ghetreem"></div> Ghế trẻ em</li>-->
+                </ul>
+                <h3 class="text-center">SƠ ĐỒ GIƯỜNG NẰM</h3>
+                <div id="seatMapOneWay" class="row">
+
+                </div>
+            </div>
+            <div class="select-seat" id="chooseRound" style="display: block">
+                <h3 class="trip-info">Chọn ghế chuyến về</h3>
+                <p style="padding-left: 15px; padding-bottom: 20px; font-style: italic">* Trẻ em vẫn được tính chỗ và giá vé bằng 100% vé người lớn. </p>
+                <ul class="chuthich">
+                    <li><div class="ghetrong"></div> Ghế trống</li>
+                    <li><div class="ghedachon"></div> Ghế đã chọn</li>
+                    <li><div class="ghedaban"></div> Ghế đã bán</li>
+                    <!--<li><div class="ghetreem"></div> Ghế trẻ em</li>-->
+                </ul>
+                <div id="seatMapRound" class="row">
+
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4 fixed-top" style="z-index: 10">
+            <div class="row">
+                <div class="customer-info col-md-12" id="fixed-scroll-order">
+                    <h4 class="trip-info" style="text-transform: uppercase; padding-left: 0px;">Chi tiết giá vé</h4>
+                    <div class="total-title">
+                        <h4>Lượt đi</h4>
+                        <div class="total-inside row">
+                            <div class="col-md-12">
+                                Ghế đã chọn: <span class="seatlist" id="ghedi"></span> <br>
+                            </div>
+                            <div class="col-md-12">
+                                Giá người lớn: <span class="price" id="adultMoneyOneway">0 VND</span> <br>
+                            </div>
+                            <div class="col-md-12">
+                                Giá trẻ em: <span class="price" id="babyMoneyOneWay">0 VND</span> <br>
+                            </div>
+                            <div class="col-md-12">
+                                Phí trung chuyển: <span class="price" id="transshipmentPriceOneway">0 VND</span> <br>
+                            </div>
+                        </div>
+                        <div class="subtotal">
+                            Tổng tiền lượt đi<br>
+                            <strong id="totalMoneyOneway">0 VND</strong>
+                        </div>
+                    </div>
+                    <div class="total-title" id="total-round" style="display:none;">
+                        <h4>Lượt về</h4>
+                        <div class="total-inside row">
+                            <div class="col-md-12">
+                                Ghế đã chọn: <span class="seatlist" id="gheve"></span> <br>
+                            </div>
+                            <div class="col-md-12">
+                                Giá người lớn: <span class="price" id="adultMoneyReturn">0 VND</span> <br>
+                            </div>
+                            <div class="col-md-12">
+                                Giá trẻ em: <span class="price" id="babyMoneyReturn">0 VND</span> <br>
+                            </div>
+                            <div class="col-md-12">
+                                Phí trung chuyển: <span class="price" id="transshipmentPriceReturn">0 VND</span> <br>
+                            </div>
+                        </div>
+                        <div class="subtotal">
+                            Tổng tiền lượt về<br>
+                            <strong id="totalMoneyReturn">0 VND</strong>
+                        </div>
+                    </div>
+                    <div id="promotion" style="display: none">
+                        <h4>Khuyến mãi</h4>
+                        <div class="promotion-div row">
+                            <div class="col-md-12">
+                                Giảm giá: <span class="price" id="promotionPrice"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="total">
+                        Tổng tiền<br>
+                        <strong id="totalMoney">0 VND</strong>
+                    </div>
+                </div>
+                <div class="col-md-12 payment">
+                    <div class="col-md-12 payment-dialog">
+                        <h3>Thanh toán</h3>
+                        <div class="payment-form">
+                            <div class="radio">
+                                <!--<label class="radio">Thanh toán bằng thẻ nội địa-->
+                                <!--<input type="radio" class="paymenttype" name="paymenttype" value="1">-->
+                                <!--<span class="checkround"></span>-->
+                                <!--</label>-->
+
+                                <!--<div class="test" style="display: block">-->
+                                <label class="radio">Thanh toán Online
+                                    <input type="radio" class="paymenttype" name="paymenttype" value="2">
+                                    <span class="checkround"></span>
+                                </label>
+                                <!--&lt;!&ndash;<label class="radio">Thanh toán qua ví-->
+                                <!--<input type="radio" class="paymenttype" name="paymenttype" value="3">-->
+                                <!--<span class="checkround"></span>-->
+                                <!--</label>&ndash;&gt;-->
+                                <!--</div>-->
+
+
+                                <label class="radio">Thanh toán lúc lên xe
+                                    <input type="radio" class="paymenttype" checked="checked" name="paymenttype" value="5">
+                                    <span class="checkround"></span>
+                                </label>
+                                <label class="radio" id="radiochuyenkhoan">Chuyển khoản
+                                    <input type="radio" class="paymenttype" name="paymenttype" value="6">
+                                    <span class="checkround"></span>
+                                </label>
+                            </div>
+                            <center>
+                                <button type="button" id="hoanthanhbtn" class="btn">Xác nhận đặt
+                                    vé
+                                </button>
+                                <button type="button" style="display: none" id="btnchuyenkhoan" class="btn" data-toggle="modal" data-target="#chuyenkhoan">
+                                    Thông tin chuyển khoản
+                                </button>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Modal-->
+<div class="modal fade" id="chuyenkhoan" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalLabel">Thông tin chuyển khoản</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Đóng">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3>SDT đặt vé : <i id="phone"></i><br>thanh toan ma ve <i id="ticketId"></i></h3>
+
+                <p><strong>Ngân hàng MB</strong></p>
+                <p>Chủ tài khoản: Nguyễn Thị Hằng - Số tài khoản: 0590102311037</p>
+                <p>Chi nhánh: Đống Đa</p>
+                <p>
+                    ***LƯU Ý QUAN TRỌNG: Quý khách ghi rõ trong nội dung chuyển khoản bao gồm: <br>
+                    Tên khách hàng - SĐT khách hàng - điểm đón xe - ngày đi xe - số lượng vé. <br>
+                    Ví dụ : Tuấn ĐT 0971xxx555 đón xe ở Vp Tố Hữu - đặt 2 vé đi về tối 29/4/2018</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--End Modal-->
+<script>
+    $(document).ready(function() {
+        $('#today').click(function(){
+            $('#depatureDate').datepicker().datepicker("setDate", new Date());
+            return false;
+        });
+        $('#tomorrow').click(function(){
+            $('#depatureDate').val(getDateTomorrow()).change();
+            return false;
+        });
+        $('html, body').animate({
+            scrollTop: $("#booking-form").offset().top
+        },1000);
+
+        height = parseInt($('header').outerHeight( true )) + parseInt($('.slide').outerHeight( true ));
+        left = $('.fixed-top').offset().left;
+        $(window).scroll(function(){
+            heightBot = $(document).height()-$(window).scrollTop()-$(window).height();
+            if($(window).scrollTop()>height&&$(window).scrollTop()<heightBot&&$(window).width()>970){
+                $('.fixed-top').css({'position':'fixed','top':'0px','right':'0px','bottom':'auto'});
+            }else if($(window).scrollTop()>heightBot&&$(window).width()>970){
+                $('.fixed-top').css({'position':'fixed','bottom':'0px','right':'0px','top':'auto'});
+            }else{
+                $('.fixed-top').css({'position':'relative','top':'0px','right':'0px'});
+            }
+        });
+    });
+    function getDateTomorrow(){
+        var d=new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+        date = d.getDate();
+        month = d.getMonth()+1;
+        year = d.getFullYear();
+        if(date<10){
+            date = '0'+date;
+        }
+        if(month<10){
+            month = '0'+month;
+        }
+        return date+'/'+month+'/'+year;
+    }
+</script>

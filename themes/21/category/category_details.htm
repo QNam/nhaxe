@@ -1,0 +1,115 @@
+<div class="container bg-3">
+	<div class="news-breadcrumb">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<!--{loop $_breadcrumbs $k $v}-->
+				<li class="breadcrumb-item"><a href="{$v['href']}">{$v['text']}</a> <i class="fa fa-caret-right"></i></li>
+				<!--{/loop}-->
+			</ol>
+		</nav>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="news-title">
+				<h3>{$_categoryDetail['title']}</h3>
+				<div class="news-date">
+					<div class="left"><i class="fa fa-clock-o"></i> {lang post_date}: {$_categoryDetail['create_time']}</div>
+				</div>
+			</div>
+			<div class="news-content">
+				{$_categoryDetail['details']}
+				
+			</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('html, body').animate({
+            scrollTop: $(".news-title").offset().top
+        },1000);
+    });
+</script>
+
+
+<!--{if $web['anvui_id'] == TC08f1qJkyzgVDFT AND $_categoryDetail['id'] == 45}-->
+<script type="text/javascript">
+    var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    var urlAndroid = 'https://play.google.com/store/apps/details?id=vn.anvui.havana';
+    var urlIOs = 'https://itunes.apple.com/app/id1450384270';
+    
+
+    if(isMobile.any() != null) {
+        if(isMobile.any()[0] == 'Android' && urlAndroid != '')
+        {
+            window.location.href = urlAndroid;
+        }
+
+        if((isMobile.any()[0] == 'iPhone' || isMobile.any()[0] == 'iPad' || isMobile.any()[0] == 'iPod') && urlIOs != '')
+        {
+            window.location.href = urlIOs;
+        }
+    }
+</script>
+<!--{/if}-->
+<!--{if $web['anvui_id'] == TC1OHoeA_ekC AND $_categoryDetail['id'] == 141}-->
+<script type="text/javascript">
+	var isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+        }
+    };
+
+    var urlAndroid = 'https://play.google.com/store/apps/details?id=vn.anvui.xehuongkhue';
+    var urlIOs = 'https://itunes.apple.com/app/id1478873882';
+    
+
+    if(isMobile.any() != null) {
+        if(isMobile.any()[0] == 'Android' && urlAndroid != '')
+        {
+            window.location.href = urlAndroid;
+        }
+
+        if((isMobile.any()[0] == 'iPhone' || isMobile.any()[0] == 'iPad' || isMobile.any()[0] == 'iPod') && urlIOs != '')
+        {
+            window.location.href = urlIOs;
+        }
+    }
+</script>
+<!--{/if}-->

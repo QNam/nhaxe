@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+    @Templete by doanhdz
+-->
+<head>
+    
+    
+
+
+    <!-- Include header meta -->
+    <!--{temp common/header_meta}-->
+    <!-- End cac header meta-->
+    
+    <!--{if $mod == 'insurrancelove'}-->
+        <!-- Include cac file css -->
+        <!--{temp common/global_css1}-->
+        <!-- End cac file css-->
+        <!-- Include cac file script -->
+        <!--{temp common/global_script1}-->
+        <!-- End include cac file script-->
+    <!--{else}-->
+        <!-- Include cac file css -->
+        <!--{temp common/global_css}-->
+        <!-- End cac file css-->
+        <!-- Include cac file script -->
+        <!--{temp common/global_script}-->
+        <!-- End include cac file script-->
+    <!--{/if}-->
+
+    
+</head>
+
+<body>
+
+
+
+<!--{if $web['anvui_id'] == 'TC1OHntfnujP'}-->
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<!-- Your customer chat code -->
+<div class="fb-customerchat"
+  attribution="setup_tool"
+  page_id="1184689714893201"
+  theme_color="#0084ff"
+  logged_in_greeting="Hi! How can we help you?/ Inter Bus Lines xin kính chào Quý Khách!"
+  logged_out_greeting="Hi! How can we help you?/ Inter Bus Lines xin kính chào Quý Khách!">
+</div>
+<!--{/if}-->
+    <!-- End include popup so sanh-->
+
+    <!-- Quan ly toan bo layout web -->
+    web_layout
+    <!-- End quan ly toan bo layout web -->
+    <!--{if $mod != 'insurrancelove'}-->
+    <script>
+        $('.bus-list').owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 4
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+
+        $('.travel-list').owlCarousel({
+            loop: false,
+            margin: -70,
+            nav: true,
+            dots: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 4
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    </script>
+    <!--{/if}-->
+</body>
+
+</html>

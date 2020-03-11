@@ -1,0 +1,13 @@
+<nav id="navigation">
+    <a href="#" id="pull" class="toggle-mobile-menu"><i class="fa fa-bars"></i>Menu</a>
+    <ul id="menu-header" class="menu">
+        <!--{eval $i = 0 }-->
+        <!--{loop $menu['top'] $k $v}-->
+            <!--{if $i < 9}-->
+                <!--{temp common/menu_top_list}-->
+            <!--{/if}-->
+            <!--{eval $i++}-->
+        <!--{/loop}-->
+        
+    </ul>
+</nav>

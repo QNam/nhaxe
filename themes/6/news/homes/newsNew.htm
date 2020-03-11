@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <h2 class="title-bottom">{lang news_new}</h2>
+    <div class="f-center-body">
+      <ul class="list-news clearfix">
+        <!--{eval $i=0}-->
+        <!--{loop $_news $k $v}-->
+        <!--{if $i < 8}-->
+        <li class="item-news-home">
+          <div class="img clearfix">
+            <a title="$v['title']" href="$v['link']">
+              <a href="$v['link']" title=""> <img src="<!--{loadImage $v['img'] none 570 290}-->" class="img-responsive" alt="$v['title']" /> </a>
+            </a>
+          </div>
+          <div class="title">
+            <a title="Title" href="$v['link']">$v['title']</a>
+          </div>
+          <div class="news-recap clearfix"><!--{cutString $v['short'] 0 100}--></div>
+        </li>
+        <!--{/if}-->
+        <!--{eval $i++}-->
+        <!--{/loop}-->
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>

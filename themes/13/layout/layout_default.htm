@@ -1,0 +1,51 @@
+<!--{temp common/position_top}-->
+
+<!--Slide-->
+
+    bnc_position_block_5
+
+<!--End Slide-->
+<!--Load content-->
+load_temp
+<!--End Load content-->
+
+
+<div class="modal fade" id="adsModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-body" id="ads-body-d">
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    getAds();
+    function getAds() {
+    var dnow = new Date();
+    var d = dnow.getTime();
+    var ddata = [];
+    var companyId = $("base").attr("id");
+    $.ajax({
+        type: 'POST',
+        url: 'https://ticket-new-dot-dobody-anvui.appspot.com/popup/get-list',
+        dataType: "json",
+        async:true,
+        data: JSON.stringify({companyId: companyId,date:d}),
+        success: function (data) {
+            if(data.results.popUps[0].link !=''){
+                $('#adsModal').modal('show');
+                html = '<img src="'+data.results.popUps[0].link+'" style="width: 100%" class="img-responsive img-ads" alt="">'
+            $("#ads-body-d").append(html);
+            }
+            
+
+        }
+    });
+    return ddata;
+    }
+</script>
+<!--{temp common/position_bottom}-->

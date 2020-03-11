@@ -1,0 +1,31 @@
+<li class="widget widget-sidebar transfers_featured_services_widget">
+    <div class="services boxed white">
+      <!--{eval $i=0}-->
+        <!--{loop $_news $k $v}-->
+        <!--{if $i < 4}-->
+        <!-- Item -->
+              <article class="one-fourth fadeIn">
+                  <figure class="featured-image">
+                      <img src="<!--{loadImage $v['img'] none 570 290}-->" alt="Shuttle transfers">
+                      <div class="overlay">
+                          <a href="$v['link']" title="$v['title']" class="expand">+</a>
+                      </div>
+                  </figure>
+                  <div class="details">
+                      <h4><a href="$v['link']" title="$v['title']">$v['title']</a></h4>
+                      <p>
+                          <!--{cutString $v['short'] 0 100}-->
+                      </p>
+                      <a href="$v['link']" title="Read more" class="more">Read more</a>
+                  </div>
+              </article>
+        <!-- //Item -->
+        <!--{/if}-->
+        <!--{eval $i++}-->
+        <!--{/loop}-->
+        
+        
+        
+    </div>
+</li>
+<div class="clearfix"></div>

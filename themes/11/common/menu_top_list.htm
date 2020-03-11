@@ -1,0 +1,10 @@
+<li class="dropdown singleDrop ">
+  <a href="{$v['link']}" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">{$v['namemenu']}</a>
+  <!--{if isset($v['sub']) AND count($v['sub']) > 0 }-->
+  <ul class="dropdown-menu dropdown-menu-left">
+  	<!--{loop $v['sub'] $k $v2}-->
+  		<li><a href="{$v2['namemenu']}">{$v2['namemenu']}</a>
+  	<!--{/loop}-->
+  </ul>
+  <!--{/if}-->
+</li>

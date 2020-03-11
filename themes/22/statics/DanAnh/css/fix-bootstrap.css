@@ -1,0 +1,311 @@
+/* để chỉnh lại mấy cái ngu học của boostrap */
+
+html
+{
+	-webkit-text-size-adjust: auto;
+	-ms-text-size-adjust:auto;
+	-moz-text-size-adjust:auto;
+	text-size-adjust:auto;
+}
+
+*{
+	-webkit-box-sizing:unset;
+	-moz-box-sizing:unset;
+	box-sizing:unset;
+}
+:after,:before
+{
+	-webkit-box-sizing:unset;
+	-moz-box-sizing:unset;
+	box-sizing:unset;
+}
+
+
+.pagination>li:last-child>a, .pagination>li:last-child>span,
+.pagination>li:first-child>a, .pagination>li:first-child>span
+ {
+    padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+.pagination li
+{
+	display: inline-block;
+}
+
+.pagination li a,
+.pagination li span
+
+{
+		margin: 0 -2px 0 -3px;
+
+}
+
+.pagination>li>a, .pagination>li>span,
+.pagination>li>a:hover, .pagination>li>span:hover
+{
+    color: #333;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover {
+   
+    color: #fff;
+    background-color: #e5a823;
+    border-color: #e5a823;
+}
+
+/* booking-form */
+
+.row,
+.col-md-12 
+{
+margin: 0;
+}
+
+.booking-page .col-lg-3,
+.booking-page .col-md-2,
+.booking-page .col-md-3 {
+    width: calc(25% - 30px);
+	margin: 10px 15px;
+	display: inline-block;
+	padding: 0;
+}
+
+
+.booking-page .col-md-6 {
+    width: calc(50% - 30px);
+	margin: 10px 15px;
+	padding: 0;
+}
+
+
+.booking-page .col-md-12 {
+    width: calc(100% - 30px);
+	margin: 10px 15px;
+	padding: 0;
+}
+
+.booking-page .form-control
+{
+	width: calc(100% - 55px);
+	font-size: 16px;
+	padding: 4px 12px;
+	padding-left: 40px;
+	margin: 0;
+}
+
+.booking-page .title,
+.swap 
+{
+	display: none;
+}
+
+.booking-page .iconic-input i {
+    color: #555;
+    font-size: 18px;
+    margin: 12px 0 0 15px;
+    position: absolute;
+}
+.booking-page .btn,
+.booking-page #search-btn
+{
+	height: auto;
+	line-height: auto;
+	display:inline-block;
+	padding: 9px 0px;
+	background: #e6ba3b;
+	color: #fff;
+	width: calc(100% - 00px);
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	border: none;
+	font-size: 18px;
+	margin-right: 10px;
+	margin-top: 24px;
+}
+
+
+.booking-page .btn:after,
+.booking-page #search-btn:after
+{
+	content: " ";
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 00%;
+	background: #999;
+	z-index: 0;
+	mix-blend-mode: overlay;
+	
+	-webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+
+.booking-page .btn:hover:after,
+.booking-page #search-btn:hover:after
+{
+	left:100%;
+	//background:#E5A823;
+}
+
+.booking-page .search-btn .btn
+{
+	margin-top: 26px;
+}
+
+/* booking modal*/
+
+.booking-page .modal-title
+{
+	font-size: 16px;
+	width: 80%;
+	
+	display: inline-block;
+}
+
+.booking-page .modal-content .col-md-12 {
+    width: 100%;
+	margin: 10px 0px;
+	padding: 0;
+}
+
+.booking-page .select2-container .select2-selection--single {
+   
+    height: 40px;
+   }
+
+.booking-page .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 40px;
+}
+
+.booking-page .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 40px;
+    top: 1px;
+    right: 4px;
+    width: 20px;
+}
+
+/* date picker */
+
+.ui-widget-header {
+    border: 1px solid #e78f08;
+    background: #e6ba3b !important;
+    color: #fff;
+    font-weight: bold;
+}
+
+.ui-datepicker
+{
+	font-family: panton !important;
+}
+
+/* tour choosing */
+
+#steps ul li {
+    width: calc(33.33% - 14px);
+    float: left;
+    text-align: center;
+    display: block;
+    padding: 0;
+    text-transform: uppercase;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+	margin: 0 20px 0 0;
+}
+
+#steps ul li.active {
+    background: #e6ba3b;
+}
+
+#steps ul li:before {
+    display: none;
+}
+
+#steps ul li:after,
+#steps ul li.active:after  {
+	display: block;
+	content : "";
+	background: transparent;
+	border: none;
+	width: 0; 
+	height: 0; 
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #f4f4f4;	
+	position: absolute;
+	right: -10px;
+	top: 12px;
+}
+
+#steps ul li.active:after
+{
+	border-left: 10px solid #e6ba3b;
+}
+
+#steps ul li:last-child
+{
+	margin: 0;
+}
+#steps ul li:last-child:after
+{
+	display: none;
+}
+
+#select-seat-oneway .col-md-8
+{
+	width: 66.6%;
+	margin :0;
+	padding: 0;
+	display: block;
+}
+#select-seat-oneway .col-md-4
+{
+	width: 33.3%;
+	margin :0;
+	padding: 0;
+	display: block;
+}
+
+#select-seat-oneway .col-md-6
+{
+	width: calc(50% - 20px);
+	padding: 0;
+	margin: 20px 10px;
+}
+#select-seat-oneway{
+	width: calc(100% - 10px);
+	padding: 0;
+	margin: 20px 5px;
+}
+#select-seat-oneway .col-md-12
+{
+	width: calc(100% - 20px);
+	padding: 0;
+	margin: 20px 10px;
+}
+
+/* */
+
+@media (max-width: 991px) and (min-width: 768px)
+{
+.hidden-xs .offer-container
+{
+	display: block!important;
+		margin-left: 00px;
+
+}
+}
+
+@media (max-width: 768px) {
+	.hidden-xs .offer-container
+{
+	display: none!important;
+}
+}

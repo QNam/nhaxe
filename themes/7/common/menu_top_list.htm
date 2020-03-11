@@ -1,0 +1,22 @@
+<!--{if $v['icon'] == ''}-->
+<li class="has-sub ">
+    <a href="{$v['link']}">
+      <span>{$v['namemenu']}</span>
+    </a>
+    <!--{if isset($v['sub']) AND count($v['sub']) > 0 }-->
+    <ul class="dropdown-menu-item">
+        <!--{loop $v['sub'] $k $v2}-->
+        <li>
+            <a href="{$v2['link']}" title="">{$v2['namemenu']}</a>
+        </li>
+        <!--{/loop}-->
+    </ul>
+    <!--{/if}-->
+</li>
+<!--{else}-->
+<li class="homeicon active">
+    <a href="http://xetuannga.com/index.html">
+      <span><img src="<!--{loadImage $v['icon'] none 331 184}-->" alt="logo" class=" hvr-bob"></span>
+    </a>
+</li>
+<!--{/if}-->

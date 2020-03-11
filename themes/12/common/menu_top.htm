@@ -1,0 +1,46 @@
+<nav id="nav" class="main-nav">
+    <ul id="menu-primary" class="">
+        <!--{eval $i = 0 }-->
+        <!--{loop $menu['top'] $k $v}-->
+            <!--{if $i < 9}-->
+                <!--{temp common/menu_top_list}-->
+            <!--{/if}-->
+            <!--{eval $i++}-->
+        <!--{/loop}-->
+        
+    </ul>
+</nav>
+
+<div class="menu-mobile">
+    <section class="button_menu_mobile">
+        <div id="nav_list">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+    </section>
+    <nav class="menutop">
+        <div class="menu-top-custom">
+            <div class="navbar-collapse pushmenu pushmenu-left">
+                <ul class="nav navbar-nav">
+                    <!--{eval $i = 0 }-->
+			        <!--{loop $menu['top'] $k $v}-->
+			            <!--{if $i < 9}-->
+			                <!--{temp common/menu_top_list}-->
+			            <!--{/if}-->
+			            <!--{eval $i++}-->
+			        <!--{/loop}--> 
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<script type="text/javascript">
+	$("#nav_list").click(function(){
+		$(".button_menu_mobile").toggleClass("active");
+		$("body").toggleClass("pushmenu-push-toright");
+		$(".navbar-collapse").toggleClass("pushmenu-open");
+	})
+
+</script>
+
+

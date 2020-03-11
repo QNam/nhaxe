@@ -1,0 +1,170 @@
+<?php
+                    /**
+                     * @Project BNC v2 -> Template
+                     * @File /data/www/superweb/fe/tmp/themes/32//common/position_top.php
+                     * @Author Quang Chau Tran (quangchauvn@gmail.com)
+                     */
+                    if(!defined('BNC_CODE')) {
+                        exit('Access Denied');
+                    }
+                    ?><div id="av-header">
+    <div class="av-headerTop">
+        <div class="wrapper">
+            <div class="av-logo">
+                    <a href="<?=$web['home_url']?>">
+                        <?php if($web['logo'] != null) { ?>
+                        <?php if($web['logo']['is_swf']) { ?>
+                        <object width="<?=$web['logo']['width']?>" height="<?=$web['logo']['height']?>">
+                            <param value="transparent" name="wmode">
+                            <param value="<?=$web['static_upload']?><?=$web['logo']['img']?>" name="movie">
+                            <embed width="<?=$web['logo']['width']?>" height="<?=$web['logo']['height']?>" wmode="transparent" src="<?=$web['static_upload']?><?=$web['logo']['img']?>">
+                        </object>
+                        <?php } else { ?>
+                        <img id="logo-main" src="<?=$web['static_upload']?><?=$web['logo']['img']?>">
+                        <?php } ?>
+                        <?php } else { ?>
+                        <img id="logo-main" src="<?=$web['logo']['img']?>" class="img-responsive logo" alt="Logo" />
+                        <?php } ?>
+                    </a>
+            </div>
+            <div class="info_header">
+                <div class="top_tool">
+                    <!-- GTranslate: https://gtranslate.io/ -->
+                    <a href="#" onclick="doGTranslate('vi|en');return false;" title="English" class="gflag nturl" style="background-position:-0px -0px;"><img src="//gtranslate.net/flags/blank.png" height="32" width="32" alt="English" /></a><a href="#" onclick="doGTranslate('vi|vi');return false;" title="Vietnamese" class="gflag nturl" style="background-position:-200px -400px;"><img src="//gtranslate.net/flags/blank.png" height="32" width="32" alt="Vietnamese" /></a>
+
+                    <style type="text/css">
+                    <!--
+                    a.gflag {vertical-align:middle;font-size:32px;padding:1px 0;background-repeat:no-repeat;background-image:url(//gtranslate.net/flags/32.png);}
+                    a.gflag img {border:0;}
+                    a.gflag:hover {background-image:url(//gtranslate.net/flags/32a.png);}
+                    #goog-gt-tt {display:none !important;}
+                    .goog-te-banner-frame {display:none !important;}
+                    .goog-te-menu-value:hover {text-decoration:none !important;}
+                    body {top:0 !important;}
+                    #google_translate_element2 {display:none!important;}
+                    -->
+                    </style>
+
+                    <div id="google_translate_element2"></div>
+                    <script type="text/javascript">
+                    function googleTranslateElementInit2() {new google.translate.TranslateElement({pageLanguage: 'vi',autoDisplay: false}, 'google_translate_element2');}
+                    </script><script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit2"></script>
+
+
+                    <script type="text/javascript">
+                    /* <![CDATA[ */
+                    eval(function(p,a,c,k,e,r){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)r[e(c)]=k[c]||e(c);k=[function(e){return r[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('6 7(a,b){n{4(2.9){3 c=2.9("o");c.p(b,f,f);a.q(c)}g{3 c=2.r();a.s(\'t\'+b,c)}}u(e){}}6 h(a){4(a.8)a=a.8;4(a==\'\')v;3 b=a.w(\'|\')[1];3 c;3 d=2.x(\'y\');z(3 i=0;i<d.5;i++)4(d[i].A==\'B-C-D\')c=d[i];4(2.j(\'k\')==E||2.j(\'k\').l.5==0||c.5==0||c.l.5==0){F(6(){h(a)},G)}g{c.8=b;7(c,\'m\');7(c,\'m\')}}',43,43,'||document|var|if|length|function|GTranslateFireEvent|value|createEvent||||||true|else|doGTranslate||getElementById|google_translate_element2|innerHTML|change|try|HTMLEvents|initEvent|dispatchEvent|createEventObject|fireEvent|on|catch|return|split|getElementsByTagName|select|for|className|goog|te|combo|null|setTimeout|500'.split('|'),0,{}))
+                    /* ]]> */
+                    </script>
+
+                </div>
+                <?php include $_B['temp']->load('common/menu_top') ?>
+                
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    
+    <div class="av-headMobile fixed_menu">
+        <div class="wrapper">
+                <a href="<?=$web['home_url']?>" target="_self">
+                    <?php if($web['logo'] != null) { ?>
+                        <?php if($web['logo']['is_swf']) { ?>
+                        <object width="<?=$web['logo']['width']?>" height="<?=$web['logo']['height']?>">
+                            <param value="transparent" name="wmode">
+                            <param value="<?=$web['static_upload']?><?=$web['logo']['img']?>" name="movie">
+                            <embed width="<?=$web['logo']['width']?>" height="<?=$web['logo']['height']?>" wmode="transparent" src="<?=$web['static_upload']?><?=$web['logo']['img']?>">
+                        </object>
+                        <?php } else { ?>
+                        <img id="logo-main" src="<?=$web['static_upload']?><?=$web['logo']['img']?>">
+                        <?php } ?>
+                        <?php } else { ?>
+                        <img id="logo-main" src="<?=$web['logo']['img']?>" class="img-responsive logo" alt="Logo" />
+                        <?php } ?>
+                </a></div>
+            <div class="div_mobile">
+                <div class="menu_mobile">
+                    <div class="icon_menu"><span>Menu</span></div>
+                    <div class="divmm">
+                        <div class="mmContent">
+                            <div class="mmTitle">
+                                <div class="searchMobile">
+                                    <a href="<?=$web['home_url']?>" target="_self">
+                                        <?php if($web['logo'] != null) { ?>
+                                            <?php if($web['logo']['is_swf']) { ?>
+                                            <object width="<?=$web['logo']['width']?>" height="<?=$web['logo']['height']?>">
+                                                <param value="transparent" name="wmode">
+                                                <param value="<?=$web['static_upload']?><?=$web['logo']['img']?>" name="movie">
+                                                <embed width="<?=$web['logo']['width']?>" height="<?=$web['logo']['height']?>" wmode="transparent" src="<?=$web['static_upload']?><?=$web['logo']['img']?>">
+                                            </object>
+                                            <?php } else { ?>
+                                            <img id="logo-main" src="<?=$web['static_upload']?><?=$web['logo']['img']?>" style="max-height: 45px;">
+                                            <?php } ?>
+                                            <?php } else { ?>
+                                            <img id="logo-main" src="<?=$web['logo']['img']?>" class="img-responsive logo" alt="Logo" />
+                                            <?php } ?>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mmMenu">
+                                <ul>
+                                    <?php $i = 0 ?>
+                                    <?php if(is_array($menu['top'])) { foreach($menu['top'] as $k => $v) { ?>
+                                        <?php if($i < 9) { ?>
+                                            <?php include $_B['temp']->load('common/menu_top_list') ?>
+                                        <?php } ?>
+                                        <?php $i++ ?>
+                                    <?php } } ?>
+                                </ul>
+                            </div>
+                            <div class="close-mmenu"></div>
+                        </div>
+                        <div class="divmmbg"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $('.icon_menu').click(function(){
+        $('.menu_mobile').addClass('showmenu');
+        $('.divmm').addClass('show');
+         
+    })
+    $('.close-mmenu').click(function(){
+        $('.menu_mobile').removeClass('showmenu');
+        $('.divmm').removeClass('show');
+
+    })
+</script>
+<?php if($mod != 'home') { ?>
+<?php if(isset($web['background']['color'])) { ?>
+<style type="text/css">
+.header {
+    position: relative;
+    background: {
+        <?=$web['background']['color']?>
+    }
+    ;
+    background-position: center top;
+}
+</style>
+<?php } else { ?>
+<style type="text/css">
+.header {
+    position: relative;
+    background: #0b4a97;
+    background-position: center top;
+}
+</style>
+<?php } ?>
+<?php } ?>
+<style type="text/css">
+    a.ticket-ac-btn.btn-vxr-lg.btn.pull-right.w100.hasSeat.closed {
+    line-height: 33px;
+}
+</style>

@@ -1,0 +1,16 @@
+<!--{if isset($_info)}-->
+    <!--{loop $_info $k $v}-->
+    <div class="item">                    
+        <a href="{$v['href']}"> 
+            <div class="img-container">
+                <img src="<!--{loadImage $v['thumb'] none null null}-->" />
+            </div>
+            <h3>{$v['title']}</h3>
+        </a>
+                      
+    </div>
+    
+    <!--{/loop}-->
+<!--{else}-->
+{lang no_record_exists}
+<!--{/if}-->

@@ -1,0 +1,34 @@
+<!--{loop $data $k $v}--> 
+<div class="section section7 " >
+  <div class="block bock-fkb  box-block7">
+     <div class="box-slider7">
+        <div class="idetails">
+           <div class="scrollbar">
+              <div class="track">
+                 <div class="thumb">
+                    <div class="end"></div>
+                 </div>
+              </div>
+           </div>
+           <div class="viewport">
+              <div class="overview">
+                 <div class="box-galery">
+                    <ul class="grid effect-1" id="grid">
+                        <!--{loop $v['image_slide'] $k2 $v2}-->
+                           
+                            <li>
+                              <a title="" href="javascript:void(0)">
+                              <img src="<!--{loadImage $v2['src_link'] none 1170 500}-->" class="gallery-item" onclick="showPopupGallery(81)">
+                              </a>
+                           </li>
+                        <!--{/loop}-->
+                       
+                    </ul>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+  </div>
+</div>
+<!--{/loop}-->

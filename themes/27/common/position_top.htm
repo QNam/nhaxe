@@ -1,0 +1,90 @@
+<div class="br-header">
+    <div id="top-nav" class="hidden-xs">
+        <div class="container">
+            <div class="col-sm-12">
+                <ul class="clearfix">
+                    <!--{loop $menu['bottom'] $k $v}-->
+                        <!--{temp common/menu_bottom_list}-->
+                    <!--{/loop}-->
+                    
+                </ul>
+            </div>
+            <div class="col-sm-0"></div>
+        </div>
+    </div>
+    <nav>
+        <div class="container">
+            <div id="logo" class="pull-left">
+                
+                <a href="{$web['home_url']}">
+                    <!--{if $web['logo'] != null}-->
+                    <!--{if $web['logo']['is_swf']}-->
+                    <object width="{$web['logo']['width']}" height="{$web['logo']['height']}">
+                        <param value="transparent" name="wmode">
+                        <param value="{$web['static_upload']}{$web['logo']['img']}" name="movie">
+                        <embed width="{$web['logo']['width']}" height="{$web['logo']['height']}" wmode="transparent" src="{$web['static_upload']}{$web['logo']['img']}">
+                    </object>
+                    <!--{else}-->
+                    <img id="logo-main" src="{$web['static_upload']}{$web['logo']['img']}">
+                    <!--{/if}-->
+                    <!--{else}-->
+                    <img id="logo-main" src="$web['logo']['img']" class="img-responsive logo" alt="Logo" />
+                    <!--{/if}-->
+                </a>
+            </div>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed sb-toggle-left" data-toggle="collapse" data-target="" aria-expanded="false"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+            </div>
+            <div class="pull-right hidden-xs">
+                
+                <!--{temp common/menu_top}-->
+            </div>
+        </div>
+    </nav>
+</div>
+<header class="header" role="banner" style="display: none;">
+    <div class="wrap">
+        <!-- Logo -->
+        <div class="logo">
+            <a href="{$web['home_url']}">
+                <!--{if $web['logo'] != null}-->
+                <!--{if $web['logo']['is_swf']}-->
+                <object width="{$web['logo']['width']}" height="{$web['logo']['height']}">
+                    <param value="transparent" name="wmode">
+                    <param value="{$web['static_upload']}{$web['logo']['img']}" name="movie">
+                    <embed width="{$web['logo']['width']}" height="{$web['logo']['height']}" wmode="transparent" src="{$web['static_upload']}{$web['logo']['img']}">
+                </object>
+                <!--{else}-->
+                <img src="{$web['static_upload']}{$web['logo']['img']}">
+                <!--{/if}-->
+                <!--{else}-->
+                <img src="$web['logo']['img']" class="img-responsive logo" alt="Logo" />
+                <!--{/if}-->
+            </a>
+        </div>
+        <!-- //Logo -->
+        <!--{temp common/menu_top}-->
+    </div>
+</header>
+<!--{if $mod != 'home'}-->
+<!--{if isset($web['background']['color'])}-->
+<style type="text/css">
+.header {
+    position: relative;
+    background: {
+        $web['background']['color']
+    }
+    ;
+    background-position: center top;
+}
+</style>
+<!--{else}-->
+<style type="text/css">
+.header {
+    position: relative;
+    background: #0b4a97;
+    background-position: center top;
+}
+</style>
+<!--{/if}-->
+<!--{/if}-->

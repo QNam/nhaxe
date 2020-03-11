@@ -1,0 +1,51 @@
+<footer class="page-footer font-small unique-color-dark pt-0">
+    <div class="container-fluid cus-menu-footer">
+        <div class="container">
+            <ul class="footer-nav row">
+                <!--{loop $menu['bottom'] $k $v}-->
+                <!--{temp common/menu_bottom_list}-->
+                <!--{/loop}-->
+            </ul>
+        </div>
+    </div>
+    <!--End Menu footer-->
+    <!--Menu footer-->
+    <style>
+        .cus-menu-footer {
+            background-color: #000;
+            /* margin-left: -25px; */
+            /* margin-right: -25px; */
+            /* padding-top: 25px; */
+            /* padding-bottom: 10px; */
+            /* margin-top: -25px; */
+             margin-bottom: 25px; 
+        }
+        footer{
+            color: #fff;
+        }
+    </style>
+    
+
+    <!--Footer Links-->
+    <div class="container mt-5 mb-4 text-md-left">
+        {$web['footer']}
+    </div>
+
+    <!--/.Footer Links-->
+
+    <!-- Copyright-->
+    
+    <div class="footer-copyright py-3 text-center">
+        © 2018 Copyright:
+        <a href="https://anvui.vn" style="color: #ffffff">
+            <strong> An vui</strong>
+        </a>
+    </div>
+    <!--/.Copyright -->
+
+</footer>
+<!--{if $web['audio'] != null}-->
+<audio controls autoplay<!--{if $web['audio']['play_again'] == 1}--> loop<!--{/if}--> style="display:none">
+<source src="{$web['static_upload']}{$web['audio']['audio']}" type="audio/mpeg">
+</audio>
+<!--{/if}-->

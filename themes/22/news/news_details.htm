@@ -1,0 +1,27 @@
+<style type="text/css">
+  .home-video{
+    display: none;
+  }
+</style>
+<section class="post-page">
+<div class="my-container">
+    <div class="title-block">
+        <h1>{$_newsDetail['title']}</h1>
+        <p class="date">{lang date_posted} : {$_newsDetail['create_time']}</p>
+    </div>
+    
+    <article class="post-content">
+    {$_newsDetail['details']}
+    
+    </article>
+    
+</div>
+</section>
+
+<script>
+    $(document).ready(function() {
+        $('html, body').animate({
+            scrollTop: $(".news-title").offset().top
+        },1000);
+    });
+</script>

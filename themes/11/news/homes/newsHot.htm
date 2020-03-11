@@ -1,0 +1,46 @@
+<style>
+    .padding-news {
+        padding-left: 0;
+        padding-right: 0px;
+        width: 63%;
+    }
+
+    .padding-news-item {
+        /*padding-left: 0;*/
+        padding-right: 0;
+        width: 37%;
+    }
+
+    .padding-item {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+
+</style>
+<section class="section-80 section-lg-top-90 section-lg-bottom-120">
+  <div class="shell text-sm-left">
+    
+    <div class="sectionTitle">
+          <h2><span class="lightBg">{lang news_hot}</span></h2>
+      </div>
+    <div class="range text-left range-xs-center offset-top-50">
+
+      <!--{eval $i=0}-->
+        <!--{loop $_news $k $v}-->
+            
+            <div class="cell-xs-8 cell-sm-6 cell-md-4 offset-top-30 offset-sm-top-0"><a class="thumbnail-classic" href="{$v['link']}" target="_self">
+                  <figure><img width="370" height="250" src="<!--{loadImage $v['img'] none 570 290}-->" alt="">
+                    <figcaption class="thumbnail-classic-caption text-center"><span class="icon icon-xxs fa-arrow-right"></span>
+                      <h6 class="thumbnail-classic-title offset-top-0 text-uppercase text-light"><!--{cutString $v['title'] 0 25}--></h6>
+                    </figcaption>
+                  </figure></a>
+            </div>
+        <!--{eval $i++}-->
+        <!--{/loop}-->
+      
+      
+    </div>
+  </div>
+</section>
+<div class="clearfix"></div>

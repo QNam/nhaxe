@@ -1,0 +1,24 @@
+<ul class="main-menu-level">
+    <!--{eval $i = 0 }-->
+    <!--{loop $menu['top'] $k $v}-->
+
+    <!--{if $i < 9}-->
+    <!--{temp common/menu_top_list}-->
+    <!--{/if}-->
+
+    <!--{eval $i++}-->
+    <!--{/loop}-->
+</ul>
+<script>
+    $(document).ready(function () {
+        $('.mainmenu-level-item').on('mouseenter',function () {
+            $('.dropdown-menu-item').hide();
+            $(this).children('.dropdown-menu-item').show();
+        });
+
+        $('.dropdown-menu-item').on('mouseleave',function () {
+            $('.dropdown-menu-item').hide();
+        });
+    });
+</script>
+

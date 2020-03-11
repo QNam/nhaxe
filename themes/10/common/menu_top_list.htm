@@ -1,0 +1,10 @@
+<li class="<!--{if isset($v['sub']) AND count($v['sub']) > 0 }-->rd-navbar--has-dropdown rd-navbar-submenu<!--{/if}-->"><a href="{$v['link']}">{$v['namemenu']}</a><span class="rd-navbar-submenu-toggle"></span>
+	<!--{if isset($v['sub']) AND count($v['sub']) > 0 }-->
+	<ul class="rd-navbar-dropdown">
+		<!--{loop $v['sub'] $k $v2}-->
+	  		<li><a href="{$v2['namemenu']}">{$v2['namemenu']}</a>
+	  	<!--{/loop}-->
+	  
+	</ul>
+	<!--{/if}-->
+</li>

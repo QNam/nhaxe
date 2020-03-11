@@ -1,0 +1,20 @@
+<ul class="news-container">
+<!--{if isset($_news)}-->
+
+<!--{loop $_news $k $v}-->
+<li class="item">
+<a href="$v['href']">
+  <div class="img-container">
+      <img src="<!--{loadImage $v['img'] none 570 290}-->">
+    </div>
+    <h3>$v['title']</h3>
+</a>
+    <p><!--{cutString $v['short'] 0 200}--></p>               
+</li>
+
+<!--{/loop}-->
+    <!--{temp news/news_pagination}-->
+<!--{else}-->
+{lang no_record_exists}
+<!--{/if}-->
+</ul>

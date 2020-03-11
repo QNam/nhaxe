@@ -1,0 +1,35 @@
+<div class="clearfix"></div>
+<!--{loop $_home_cat $key $value}-->
+<!--{eval $content_news = $value['content_news']}-->
+<section class="news">
+    <div class="my-container">
+        <div class="title-block">
+            <h1>Du lịch Đà Lạt</h1>
+        </div>
+        <div>
+        <ul class="news-container">
+        
+        <!-- chỉ cho 3 tin mới nhất hiển thị trên trang chủ thôi nhé! -->       
+            <!--{eval $i = 0}-->
+            <!--{loop $content_news $k $v}-->
+            <!--{if $i < 3}-->
+            
+            <li class="item">
+                <a href="$v['link']">
+                    <div class="img-container">
+                        <img src="<!--{loadImage $v['img'] none 570 290}-->">
+                    </div>
+                    <h3>$v['title']</h3>
+                </a>
+                <p>$v['short']</p>               
+            </li>
+            <!--{/if}-->
+            <!--{eval $i++}-->
+            <!--{/loop}-->
+            
+            
+        </ul>
+        </div>
+    </div>
+</section>
+<!--{/loop}-->

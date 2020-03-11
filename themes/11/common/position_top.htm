@@ -1,0 +1,36 @@
+<header>
+  <nav class="navbar navbar-default navbar-main navbar-fixed-top lightHeader" role="navigation">
+      <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              
+              <a href="{$web['home_url']}" class="navbar-brand">
+                  <img width="165" height="76" src="images/logo-light-165x76.png" alt="">
+                  <!--{if $web['logo'] != null}-->
+                      <!--{if $web['logo']['is_swf']}-->
+                      <object width="{$web['logo']['width']}" height="{$web['logo']['height']}">
+                          <param value="transparent" name="wmode">
+                          <param value="{$web['static_upload']}{$web['logo']['img']}" name="movie">
+                          <embed width="{$web['logo']['width']}" height="{$web['logo']['height']}" wmode="transparent" src="{$web['static_upload']}{$web['logo']['img']}">
+                      </object>
+                      <!--{else}-->
+                      <img src="{$web['static_upload']}{$web['logo']['img']}" >
+                      <!--{/if}-->
+                  <!--{else}-->
+                      <img src="$web['logo']['img']" class="img-responsive logo"  alt="Logo"/>
+                  <!--{/if}-->
+              </a>
+          </div>
+          
+
+          <!--{temp common/menu_top}-->
+
+      </div>
+  </nav>
+</header>

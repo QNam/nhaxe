@@ -1,0 +1,124 @@
+<style>
+    .padding-news {
+        padding-left: 0;
+        padding-right: 0px;
+        width: 63%;
+    }
+
+    .padding-news-item {
+        /*padding-left: 0;*/
+        padding-right: 0;
+        width: 37%;
+    }
+
+    .padding-item {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+
+</style>
+<div class="row">
+    <div class="col-md-8" style="margin-bottom: 30px;padding-right: 0;">
+        <div class="">
+            <h3><img src="{$web['static_temp']}{$web['temp']}/statics/images/news.png" style="width: 40px; height: 40px; margin-right: 10px;" alt="">
+                <span class="title">{lang news_hot}</span></h3>
+        </div>
+        <div class="hot-news">
+            <div class="col-md-8 padding-news">
+                <div class="image-news">
+                    <a href="$_news[0]['link']">
+                        <img src="<!--{loadImage $_news[0]['img'] resize 570 290}-->" class="img-responsive" style="    height: 340px;
+    padding-right: 10px;
+    padding-top: 5px;" alt="$_news[0]['title']">
+                    </a>
+                </div>
+                <div class="content">
+                    <h3>
+                        <a href="$_news[0]['link']">$_news[0]['title']</a>
+                    </h3>
+                    <div class="description">
+                        <!--{cutString $_news[0]['short'] 0 200}-->
+                    </div>
+                </div>
+            </div>
+            <style>
+                .news-img {
+                    height: 80px;
+                }
+
+                .item-news {
+                    margin: 5px 0 5px 0;
+                    height: 90px;
+                }
+            </style>
+            <div class="col-md-4 padding-news-item">
+                <!--{eval $i=0}-->
+                <!--{loop $_news $k $v}-->
+                    <!--{if $i > 0 && $i <= 5}-->
+                    <div class="row item-news">
+                        <a href="$v['link']">
+                            <div class="col-md-6 padding-item">
+                                <img src="<!--{loadImage $v['img'] crop 570 290}-->" class="img-responsive news-img" alt="$v['title']">
+                            </div>
+                            <div class="col-md-6 padding-item">
+                                <p style="font-size: 12px;margin-top: 0;"><!--{$v['title']}--></p>
+                            </div>
+                        </a>
+                    </div>
+                    <!--{/if}-->
+                <!--{eval $i++}-->
+                <!--{/loop}-->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" style="margin-bottom: 30px;">
+        <div class="">
+            <h3><img src="{$web['static_temp']}{$web['temp']}/statics/images/booking.png" style="width: 45px; height: 45px; margin-right: 10px;" alt="">
+                <span class="title">{lang booking}</span></h3>
+        </div>
+        <div class="route-list">
+            
+
+
+            <form action="dat-ve" id="search-form">
+            <div class="row chonchieu">
+                <button type="button" class="btn btn-oder selectday selected" id="oneway">Một chiều</button>
+                <button type="button" class="btn btn-oder selectday" id="roundtrip">Khứ hồi</button>
+            </div>
+            <div class="row chuyen">
+                <div class="clearfix">
+                    <div class="col-md-12">
+                        <label for="startPoint" class="label-cus">Điểm đi</label>
+                        <input type="text" class="form-control" name="startPoint" id="startPoint" readonly>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="endPoint" class="label-cus">Điểm đến</label>
+                        <input type="text" class="form-control" name="endPoint" id="endPoint" readonly>
+                    </div>
+                </div>
+
+                <div class="clearfix" style="margin-top: 10px">
+                    <div class="col-md-12">
+                        <label for="depatureDate" class="label-cus">Ngày đi</label>
+                        <input type="text" class="form-control datepicker" name="depatureDate" id="depatureDate" readonly>
+                    </div>
+                    <div class="col-md-12">
+                        <label for="depatureDate" class="label-cus">Ngày về</label>
+                        <input type="text" class="form-control datepicker" name="returnDate" id="returnDate" readonly>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="hidden" id="startId" name="startId">
+                        <input type="hidden" id="endId" name="endId">
+                        <input type="hidden" id="isRoundTrip" name="isRoundTrip">
+                        <button type="submit" class="btn" id="search-btn">TÌM CHUYẾN XE</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </form>
+        </div>
+    </div>
+</div>
+

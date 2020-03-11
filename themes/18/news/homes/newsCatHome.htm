@@ -1,0 +1,88 @@
+<section class="bg-secondary-rgba-2 center991">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-12 col-xs-12 bg-info bg-info-side well3">
+                <h3 class="white">
+                    Bạn Muốn Đi Đâu
+                </h3>
+
+                <p class="white txt2 ">
+                    
+                </p>
+
+                <p class="white ins-right">
+                    Hình ảnh, bài viết chia sẽ các điểm du lịch nổi tiếng cùng những kinh nghiệm dành cho các bạn đam mê du lịch.
+                    <br>
+                    <br>
+                    
+                    <br>
+                    <br>
+                    Tư vấn các tour du lịch, khám phá cảnh đẹp, những món ngon cực hấp dẫn
+                </p>
+            </div>
+            <!--{eval $i = 0}-->
+            <!--{loop $data['home_travel'] $key $value}-->
+            <!--{if $i < 2}-->
+            <div class="col-md-4 col-sm-6 col-xs-12 inset-md-1">
+                <h4>
+                    $value['title']
+                </h4>
+
+                <div class="thumbnail thumbnail4">
+                    <img src="<!--{loadImage $value['img'] none 570 290}-->" alt="">
+
+                    <div class="caption">
+                        <p class="txt-darker">
+                            <!--{cutString $value['short'] 0 85}-->
+                        </p>
+                        <a href="$value['link']" class="btn btn-info">Chi tiết <span class="icon icon-md fa-long-arrow-right"></span></a>
+                    </div>
+                </div>
+            </div>   
+            <!--{/if}-->
+            <!--{eval $i++}-->         
+            <!--{/loop}-->
+            
+        </div>
+    </div>
+</section>
+
+<section class="well well2 well2_ins2">
+    <div class="container">
+        <hr class="hr2">
+        <h3 class="txt-sec">
+            Tin Tức
+        </h3>
+
+        <div class="row offset-2">
+            <!--{eval $i=0}-->
+            <!--{loop $_home_cat[0]['content_news'] $k $v}-->
+            <!--{if $i < 3}-->
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <article class="news-1">
+                    <img src="<!--{loadImage $v['img'] none 570 290}-->" alt="">
+                    <time datetime="2015-01-01">$v['create_day'], $v['create_md']</time>
+                     <h4>
+                        <a href="$v['link']">
+                            <!--{cutString $v['title'] 0 25}-->
+                        </a>
+                    </h4> 
+                    <p class="border txt1">
+                        <!--{cutString $v['short'] 0 85}-->
+                    </p>
+                    <a href="$v['link']" class="btn-link">Chi tiết<span class="icon icon-md fa-long-arrow-right"></span></a>
+                </article>
+            </div>
+            <!--{/if}-->
+            <!--{eval $i++}-->
+            <!--{/loop}-->
+            <div class="bt-ct" style="text-align: center; margin-top: 25px; text-align: center;
+    margin-top: 55px;
+    float: left;
+    width: 100%;">
+                <a href="/news.html" class="btn btn-info">Xem thêm <span class="icon icon-md fa-long-arrow-right"></span></a>
+            </div>
+        </div>
+    </div>
+</section>
+

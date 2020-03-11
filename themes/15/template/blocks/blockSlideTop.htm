@@ -1,0 +1,80 @@
+
+
+<div class="q-tab home jarallax" >
+    <video id="video_background" preload="auto" autoplay="true" loop="loop" muted volume="0">
+        <source src="{$web['static_temp']}/{$web['temp']}/statics/plugins/web-waterbus/img/video/intro.mp4" type="video/webm"/>
+    </video>
+    <div class="contentslide">
+        <div class="container">
+            <h3>HÀNH TRÌNH KẾT NỐI THỜI GIAN</h3>
+            <a href="">Tìm hiểu thêm <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-5 option" id="selectOption" style="display: none;">
+        <div class="wb-dv" style="width: 60%; margin: auto;">
+            
+            <div class="owl-carousel container">
+                <div class="icon-bus">
+                    <a href="#" id="active-waterbus">
+                        <p>Tàu Buýt</p>
+                        <img src="{$web['static_temp']}/{$web['temp']}/statics/plugins/web-waterbus/img/waterbus/waterbus.png" class="img-thumbnail rounded-circle" alt="">
+                        <p>Saigon Waterbus</p>
+                    </a>
+                </div>
+                <div class="icon-bus">
+                    <a href="#" id="active-rivertaxi">
+                        <p>Khám phá</p>
+                        <img src="{$web['static_temp']}/{$web['temp']}/statics/plugins/web-waterbus/img/waterbus/rivertaxi.png" class="img-thumbnail rounded-circle" alt="">
+                        <p>Explore SaigonRiver</p>
+                    </a>
+                </div>
+                <div class="icon-bus">
+                    <a href="#" id="active-watertaxi">
+                        <p>Tàu taxi</p>
+                        <img src="{$web['static_temp']}/{$web['temp']}/statics/plugins/web-waterbus/img/waterbus/watertaxi.png" class="img-thumbnail rounded-circle" alt="">
+                        <p>Saigon Watertaxi</p>
+                    </a>
+                </div>
+
+                <div class="icon-bus">
+                    <a href="#" id="active-trolley">
+                        <p>Xe điện</p>
+                        <img src="{$web['static_temp']}/{$web['temp']}/statics/plugins/web-waterbus/img/waterbus/saigon_trolley.png" class="img-thumbnail rounded-circle" alt="">
+                        <p>Saigon Trolley</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+</div>
+<!--{if $mod=='home'}-->
+<div class="slide-2">
+    <div class="">
+        <h2>Bạn thích đi đâu hôm nay?</h2>
+        <section class="centerSlide slider">
+            <!--{eval $t = 0}-->
+            <!--{loop $data $k $v}--> 
+                <!--{loop $v['image_slide'] $k2 $v2}-->
+                    <div class="itemTouris">
+                        <figure><img src="<!--{loadImage $v2['src_link'] none 100 100}-->"></figure> 
+                        <div class="jeg_postblock_content">
+                            
+                            <div class="jeg_post_category"> <a href="" class="category-theme-wordpress"></a></div> 
+                            <div class="jeg_post_info"> 
+                                <h3 class="jeg_post_title"> <a href="">{$v2['title']}</a> </h3> 
+                                <div class="jeg_post_meta"></div> 
+                            </div> 
+                        </div>
+                    </div>
+                <!--{/loop}-->
+              <!--{eval $t++}-->
+            <!--{/loop}-->
+        </section>  
+        <a href="" class="viewDetail">Xem chi tiết <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+        <a href="javascript:void(0)" class="bookNow">Book now <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+    </div>
+</div>
+<!--{/if}-->
